@@ -1,1 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Détail de votre commande</title>
+  <style>
+    :root {
+      --border: #d0d0d0;
+      --muted: #777;
+      --purple: #6d50ff;
+      --blue-bg: #eaf4ff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f6f6f6; font-family:  Arial, Helvetica, sans-serif; color: #111; }
+    .wrapper { min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 24px; }
+    .card { position: relative; width: 460px; background: #fff; border: 1px solid var(--border); }
+    .close { position: absolute; right: 14px; top: 10px; color: var(--muted); font-size: 20px; line-height: 1; }
+    .header { padding: 14px 16px; font-weight: 700; font-size: 16px;  }
 
+    .top { padding: 12px;}
+    .top-content {  display: flex; gap: 12px; padding: 8px; background: var(--blue-bg); }
+    .poster { width: 70px; height: 100px; border: 1px solid var(--border); background: #f1f1f1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .poster img { width: 100%; height: 100%; object-fit: cover; }
+
+    .info { flex: 1;  }
+    .info .title { font-weight: 700; font-size: 14px; }
+    .info .line { margin-top: 4px; font-size: 13px; }
+    .info a { color: var(--purple); text-decoration: none; font-weight: 600; }
+
+    .bottom { display: flex; gap: 12px; padding: 10px 16px 14px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);  align-items: flex-start; }
+    .bottom .left { font-size: 13px; line-height: 1.6; border-right: 1px solid var(--border); }
+    .bottom .right { padding-left: 15px; display: flex; align-items: flex-start; white-space: nowrap;}
+    .price {  font-size: 13px; }
+
+    .summary { display: flex; gap: 12px; padding: 10px 16px 14px; align-items: flex-start; justify-content: space-between;  border-top: 1px solid var(--border); margin-top: 30px;}
+    .summary .left { font-size: 13px; line-height: 1.9; text-align: start; margin-right: 0;}
+    .summary .right { padding-left: 15px; text-align: end; font-size: 13px;  line-height: 1.9;}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="header">Détail de votre commande</div>
+      <div class="top">
+        <div class="top-content">
+          <div class="poster">
+          <img src="n_indochine_g.jpg" alt="Image aperçu" />
+        </div>
+        <div class="info">
+          <div class="title">INDOCHINE</div>
+          <div class="line">31 Jan 2026 20:00</div>
+          <div class="line">GALAXIE </div>
+          <div class="line"><a href="#">GALAXIE</a></div>
+        </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="left">
+          <div style="font-weight: 700;">3 billets</div>
+          <div>TARIF PROMOTION</div>
+          <div>CATEGORIE 1</div>
+          <div>PORTE 37 - RANG 08 - PLACE 06 - GRADIN</div>
+          <div>PORTE 37 - RANG 08 - PLACE 07 - GRADIN</div>
+          <div>PORTE 37 - RANG 08 - PLACE 08 - GRADIN</div>
+          <div>3 x 75 €</div>
+        </div>
+        <div class="right"><div class="price" >225 €</div></div>
+      </div>
+      <div class="summary">
+      <div class="left">
+          <div style="font-weight: 700;">Montant de la réservation</div>
+          <div style="font-weight: 700;">Frais de service</div>
+          <div style="font-weight: 700;">Total de la commande</div>
+        </div>
+        <div class="right">
+          <div class="prix" >225 €</div>
+          <div class="prix" >1.65 €</div>
+          <div class="prix" style=" font-weight: 700;">226.65 €</div>
+        </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
