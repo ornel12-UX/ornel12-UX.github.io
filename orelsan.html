@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,48 +12,211 @@
       --purple: #6d50ff;
       --blue-bg: #eaf4ff;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: #f6f6f6; font-family:  Arial, Helvetica, sans-serif; color: #111; }
-    .wrapper { min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 24px; }
-    .card { position: relative; width: 460px; background: #fff; border: 1px solid var(--border); }
-    .close { position: absolute; right: 14px; top: 10px; color: var(--muted); font-size: 20px; line-height: 1; }
-    .header { padding: 14px 16px; font-weight: 700; font-size: 16px;  }
 
-    .top { padding: 12px;}
-    .top-content {  display: flex; gap: 12px; padding: 8px; background: var(--blue-bg); }
-    .poster { width: 70px; height: 100px; border: 1px solid var(--border); background: #f1f1f1; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .poster img { width: 100%; height: 100%; object-fit: cover; }
+    * {
+      box-sizing: border-box;
+    }
 
-    .info { flex: 1;  }
-    .info .title { font-weight: 700; font-size: 14px; }
-    .info .line { margin-top: 4px; font-size: 13px; }
-    .info a { color: var(--purple); text-decoration: none; font-weight: 600; }
+    body {
+      margin: 0;
+      background: #f6f6f6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+    }
 
-    .bottom { display: flex; gap: 12px; padding: 10px 16px 14px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);  align-items: flex-start; }
-    .bottom .left { font-size: 13px; line-height: 1.6; border-right: 1px solid var(--border); }
-    .bottom .right { padding-left: 15px; display: flex; align-items: flex-start; white-space: nowrap;}
-    .price {  font-size: 13px; }
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 10px;
+    }
 
-    .summary { display: flex; gap: 12px; padding: 10px 16px 14px; align-items: flex-start; justify-content: space-between;  border-top: 1px solid var(--border); margin-top: 30px;}
-    .summary .left { font-size: 13px; line-height: 1.9; text-align: start; margin-right: 0;}
-    .summary .right { padding-left: 15px; text-align: end; font-size: 13px;  line-height: 1.9;}
+    .card {
+      position: relative;
+      width: 460px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+
+    .close {
+      position: absolute;
+      right: 14px;
+      top: 10px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .header {
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .top {
+      padding: 8px;
+    }
+
+    .top-content {
+      display: flex;
+      gap: 12px;
+      padding: 8px;
+      background: var(--blue-bg);
+    }
+
+    .poster {
+      width: 70px;
+      height: 100px;
+      border: 1px solid var(--border);
+      background: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info .title {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .info .line {
+      margin-top: 4px;
+      font-size: 13px;
+    }
+
+    .info a {
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .bottom {
+      display: flex;
+      gap: 12px;
+      padding: 8px 16px 10px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .bottom .left {
+      font-size: 13px;
+      line-height: 1.6;
+      border-right: 1px solid var(--border);
+    }
+
+    .bottom .right {
+      padding-left: 15px;
+      display: flex;
+      align-items: flex-start;
+      white-space: nowrap;
+    }
+
+    .price {
+      font-size: 13px;
+    }
+
+    .summary {
+      display: flex;
+      gap: 12px;
+      padding: 8px 16px 10px;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+
+    .summary .left {
+      font-size: 13px;
+      line-height: 1.9;
+      text-align: start;
+      margin-right: 0;
+    }
+
+    .summary .right {
+      padding-left: 15px;
+      text-align: end;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .fw-alert {
+      margin: 0 16px 8px;
+      padding: 8px;
+      background-color: #cfe6ff;
+      border: 1px solid #7cbaff;
+      border-radius: 4px;
+      gap: 10px;
+      color: #000;
+      font-size: 13px;
+    }
+
+    .fw-icon {
+      width: 18px;
+      height: 18px;
+      background-color: #0074d9;
+      color: white;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-family: serif;
+      flex-shrink: 0;
+      font-style: italic;
+      margin-right: 8px;
+      vertical-align: text-top;
+    }
+
+    .fw-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fw-link {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
   <div class="wrapper">
     <div class="card">
       <div class="header">Détail de votre commande</div>
+      <div class="fw-alert">
+
+        <div class="fw-content">
+          <div><span class="fw-icon">i</span> Vos billets dans votre smartphone avec l'application Fan Wallet&trade;
+          </div>
+          <div>1. Téléchargez l'app <span class="fw-link">Fan Wallet&trade;</span> pour iPhone ou Androïd</div>
+          <div>2. Cliquez sur le lien de téléchargement de la commande ci-dessous</div>
+        </div>
+      </div>
       <div class="top">
         <div class="top-content">
           <div class="poster">
-          <img src="n_orelsan_g.webp" alt="Image aperçu" />
-        </div>
-        <div class="info">
-          <div class="title">ORELSAN</div>
-          <div class="line">24 Jan 2026 18:30</div>
-          <div class="line">ARKEA ARENA - FLOIRAC</div>
-          <div class="line"><a href="#">ARKEA ARENA</a></div>
-        </div>
+            <img src="n_orelsan_g.webp" alt="Image aperçu" />
+          </div>
+          <div class="info">
+            <div class="title">ORELSAN</div>
+            <div class="line">24 Jan 2026 18:30</div>
+            <div class="line">ARKEA ARENA - FLOIRAC</div>
+            <div class="line"><a href="#">ARKEA ARENA</a></div>
+          </div>
         </div>
       </div>
       <div class="bottom">
@@ -66,21 +230,24 @@
           <div>110 - RANG 2 - PLACE 125 - COQUE</div>
           <div>4 x 75 €</div>
         </div>
-        <div class="right"><div class="price" >300.00 €</div></div>
+        <div class="right">
+          <div class="price">300.00 €</div>
+        </div>
       </div>
       <div class="summary">
-      <div class="left">
+        <div class="left">
           <div style="font-weight: 700;">Montant de la réservation</div>
           <div style="font-weight: 700;">Frais de service</div>
           <div style="font-weight: 700;">Total de la commande</div>
         </div>
         <div class="right">
-          <div class="prix" >300.00 €</div>
-          <div class="prix" >1.65 €</div>
+          <div class="prix">300.00 €</div>
+          <div class="prix">1.65 €</div>
           <div class="prix" style=" font-weight: 700;">301.65 €</div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </body>
+
 </html>
