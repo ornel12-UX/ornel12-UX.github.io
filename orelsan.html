@@ -190,6 +190,44 @@
       text-decoration: underline;
       cursor: pointer;
     }
+
+    .footer {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: #0074d9;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #0063b8;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #0074d9;
+      border: 2px solid #0074d9;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f0f8ff;
+    }
   </style>
 </head>
 
@@ -212,10 +250,10 @@
             <img src="n_orelsan_g.webp" alt="Image aperçu" />
           </div>
           <div class="info">
-            <div class="title">ORELSAN</div>
-            <div class="line">24 Jan 2026 18:30</div>
-            <div class="line">ARKEA ARENA - FLOIRAC</div>
-            <div class="line"><a href="#">ARKEA ARENA</a></div>
+            <div class="title">ORELSAN </div>
+            <div class="line">25 Jan 2026 20:00</div>
+            <div class="line">ZENITH LIMOGES METROPOLE</div>
+            <div class="line"><a href="#">ZENITH LIMOGES METROPOLE</a></div>
           </div>
         </div>
       </div>
@@ -224,10 +262,10 @@
           <div style="font-weight: 700;">4 billets</div>
           <div>TARIF NORMAL</div>
           <div>CATEGORIE OR</div>
-          <div>110 - RANG 2 - PLACE 122 - COQUE</div>
-          <div>110 - RANG 2 - PLACE 123 - COQUE</div>
-          <div>110 - RANG 2 - PLACE 124 - COQUE</div>
-          <div>110 - RANG 2 - PLACE 125 - COQUE</div>
+          <div>PARTERRE PORTE 2 - RANG   E-PLACE 34- COQUE</div>
+          <div>PARTERRE PORTE 2 - RANG   E-PLACE 36- COQUE</div>
+          <div>PARTERRE PORTE 2 - RANG   E-PLACE 38- COQUE</div>
+          <div>PARTERRE PORTE 2 - RANG   E-PLACE 40- COQUE</div>
           <div>4 x 75 €</div>
         </div>
         <div class="right">
@@ -245,6 +283,11 @@
           <div class="prix">1.65 €</div>
           <div class="prix" style=" font-weight: 700;">301.65 €</div>
         </div>
+      </div>
+      <!-- Footer avec boutons de téléchargement -->
+      <div class="footer">
+        <button class="btn btn-primary">Télécharger les billets dans l'app</button>
+        <button class="btn btn-secondary">Télécharger les billets en pdf</button>
       </div>
     </div>
   </div>
