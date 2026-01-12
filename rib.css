@@ -288,11 +288,13 @@ body {
 .transaction-line .montant.debit {
     color: #d32f2f;
     background: #ffebee;
+    padding: 2px 4px;
 }
 
 .transaction-line .montant.credit {
     color: #388e3c;
     background: #e8f5e9;
+    padding: 2px 4px;
 }
 
 /* Responsive */
