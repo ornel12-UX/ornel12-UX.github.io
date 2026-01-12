@@ -278,19 +278,21 @@ body {
 }
 
 .transaction-line .montant {
-    flex: 1;
+    flex: .5;
     font-size: 10px;
+    text-align: center;
     font-weight: 600;
-    font-family: 'Courier New', monospace;
-    text-align: right;
+    flex-wrap: nowrap;
 }
 
 .transaction-line .montant.debit {
     color: #d32f2f;
+    background: #ffebee;
 }
 
 .transaction-line .montant.credit {
     color: #388e3c;
+    background: #e8f5e9;
 }
 
 /* Responsive */
