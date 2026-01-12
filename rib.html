@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relevé d'Identité Bancaire</title>
+    <link rel="stylesheet" href="rib.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="rib-container">
+        <!-- Header avec logo SG -->
+        <div class="header">
+
+            <h1 class="title">RELEVÉ D'IDENTITÉ BANCAIRE / IBAN</h1>
+        </div>
+
+        <!-- Section Titulaire et Agence -->
+        <div class="info-section">
+            <div class="titulaire">
+                <h2>Titulaire</h2>
+                <p>Mme Nathalie De Marco</p>
+                <p>Bat C Num C13</p>
+                <p>6 Place Du 1er Mai</p>
+                <p>57250 Moyeuvre Grande</p>
+            </div>
+            <div class="agence">
+                <h2>Agence de domiciliation</h2>
+                <p>MOYEUVRE GRANDE</p>
+                <p>17 Rue De La Marne</p>
+                <p>57250 Moyeuvre Grande</p>
+            </div>
+        </div>
+
+        <!-- Section RIB -->
+        <div class="rib-section">
+            <div class="rib-label">RIB</div>
+            <table class="rib-table">
+                <thead>
+                    <tr>
+                        <th>Banque</th>
+                        <th>Guichet</th>
+                        <th>Compte</th>
+                        <th>Clé RIB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>30003</td>
+                        <td>02475</td>
+                        <td>00050277790</td>
+                        <td>53</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section IBAN -->
+        <div class="iban-section">
+            <div class="iban-label">IBAN</div>
+            <div class="iban-value">FR76 3000 3024 7500 0502 7779 053</div>
+        </div>
+
+        <!-- Section BIC -->
+        <div class="bic-section">
+            <div class="bic-label">BIC</div>
+            <div class="bic-value">SOGEFRPP</div>
+        </div>
+
+        <!-- Solde Section -->
+        <div class="solde-section">
+            <div class="solde-circle">
+                <div class="solde-label">SOLDE</div>
+            </div>
+            <div class="solde-value">3 125,80 €</div>
+        </div>
+
+        <!-- Historique -->
+        <div class="historique-section">
+            <h2 class="historique-title">HISTORIQUE DE TRANSACTIONS</h2>
+
+            <div class="historique-lines">
+                <div class="transaction-line">
+                    <span class="date">06/01/2026</span>
+                    <span class="motifs">VIR SEPA SALAIRE</span>
+                    <span class="status success">Approuvé</span>
+                    <span class="montant credit">+ 2 450,00 €</span>
+                </div>
+                <div class="transaction-line">
+                    <span class="date">05/01/2026</span>
+                    <span class="motifs">PRLV SEPA EDF</span>
+                    <span class="status error">Rejeté</span>
+                    <span class="montant debit">- 89,50 €</span>
+                </div>
+                <div class="transaction-line">
+                    <span class="date">04/01/2026</span>
+                    <span class="motifs">CB CARREFOUR MARKET</span>
+                    <span class="status error">Rejeté <small>(Problème technique)</small>
+                    <small>(Veuillez ressayer votre transaction)</small>
+                </span>
+                    <span class="montant debit">- 124,35 €</span>
+                </div>
+                <div class="transaction-line">
+                    <span class="date">03/01/2026</span>
+                    <span class="motifs">VIR SEPA CAF</span>
+                    <span class="status success">Approuvé</span>
+                    <span class="montant credit">+ 315,00 €</span>
+                </div>
+                <div class="transaction-line">
+                    <span class="date">02/01/2026</span>
+                    <span class="motifs">PRLV SEPA ORANGE</span>
+                    <span class="status success">Approuvé</span>
+                    <span class="montant debit">- 45,90 €</span>
+                </div>
+                <div class="transaction-line">
+                    <span class="date">01/01/2026</span>
+                    <span class="motifs">RETRAIT DAB SG MOYEUVRE</span>
+                    <span class="status success">Approuvé</span>
+                    <span class="montant debit">- 50,00 €</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
