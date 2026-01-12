@@ -102,25 +102,18 @@ body {
 }
 
 .rib-label {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     color: #000000;
-    min-width: 35px;
-    padding-top: 4px;
-}
-
-.table-wrapper {
-    flex: 1;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    min-width: 40px;
+    padding-top: 8px;
 }
 
 .rib-table {
     border: 2px solid #000000;
     border-collapse: collapse;
-    width: 100%;
-    min-width: 320px;
-    /* Ensure table doesn't shrink too much */
+    flex: 1;
+    max-width: 450px;
 }
 
 .rib-table th,
