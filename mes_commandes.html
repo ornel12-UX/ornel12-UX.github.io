@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes commandes - Ticketmaster</title>
+    <link rel="stylesheet" href="mes_commandes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <button class="lang-btn active">FR</button>
+                <span class="separator">|</span>
+                <button class="lang-btn">EN</button>
+            </div>
+            <div class="nav-center">
+                <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Événements dans votre ville</span>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="help-link">Aide</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ticketmaster Header -->
+    <header class="ticketmaster-header">
+        <div class="header-container">
+            <div class="header-content">
+                <button class="menu-btn" aria-label="Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <div class="logo">
+                    <span class="logo-text">ticketmaster</span>
+                    <span class="logo-tm">®</span>
+                </div>
+
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="Compte">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                        </svg>
+                    </button>
+                    <button class="icon-btn" aria-label="Panier">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <input type="text" class="search-input" placeholder="Événement, artiste ou lieu">
+                    <button class="search-btn" aria-label="Rechercher">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Account Menu -->
+    <section class="account-menu">
+        <div class="menu-container">
+            <button class="menu-item active">
+                <div class="icon-circle active">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                <span>Mes commandes</span>
+            </button>
+
+            <button class="menu-item">
+                <div class="icon-circle">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    </svg>
+                </div>
+                <span>Mes informations</span>
+            </button>
+
+            <button class="menu-item">
+                <div class="icon-circle">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                </div>
+                <span>Alertes E-mail</span>
+            </button>
+
+            <button class="menu-item">
+                <div class="icon-circle">
+                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2" />
+                    </svg>
+                </div>
+                <span>Espace Vendeur</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-container">
+            <h1 class="page-title">MES COMMANDES</h1>
+
+            <div class="card">
+                <div class="header">Détail de votre commande</div>
+                <div class="top">
+                    <div class="top-content">
+                        <div class="poster">
+                            <img src="n_guns-n-roses-world-tour-2026_p.webp" alt="Image aperçu">
+                        </div>
+                        <div class="info">
+                            <div class="title">GUNS N' ROSES - WORLD TOUR 2026</div>
+                            <div class="line">1 Juil 2026 19:00</div>
+                            <div class="line">ACCOR ARENA - PARIS</div>
+                            <div class="line"><a href="#">ACCOR ARENA</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <div style="font-weight: 700;">4 billets</div>
+                        <div>TARIF NORMAL</div>
+                        <div>CATEGORIE OR</div>
+                        <div>Porte O - rang 26 - place 15 - FAUTEUIL</div>
+                        <div>Porte O - rang 26 - place 16 - FAUTEUIL</div>
+                        <div>Porte O - rang 26 - place 17 - FAUTEUIL</div>
+                        <div>Porte O - rang 26 - place 18 - FAUTEUIL</div>
+                        <div>4 x 199.50 €</div>
+                    </div>
+                    <div class="right">
+                        <div class="price">798.00 €</div>
+                    </div>
+                </div>
+                <div class="summary">
+                    <div class="left">
+                        <div style="font-weight: 700;">Montant de la réservation</div>
+                        <div style="font-weight: 700;">Frais de service</div>
+                        <div style="font-weight: 700;">Total de la commande</div>
+                    </div>
+                    <div class="right">
+                        <div class="prix">798.00 €</div>
+                        <div class="prix">1.65 €</div>
+                        <div class="prix" style="font-weight: 700;">799.65 €</div>
+                    </div>
+                </div>
+                <!-- Footer avec boutons de téléchargement -->
+                <div class="footer">
+                    <button class="btn btn-primary">Télécharger les billets dans l'app</button>
+                    <button class="btn btn-secondary">Télécharger les billets en pdf</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Notice -->
+    <footer class="footer-notice">
+        <div class="notice-container">
+            <p class="notice-text">
+                Nous utilisons vos informations pour vous fournir nos services, et pour vous informer des préventes,
+                actualités ou bons plans concerts et spectacles, de manière personnalisée en fonction des informations
+                que nous détenons à votre sujet et de la manière dont vous interagissez avec nous. Elles vous
+                permettent en particulier de recevoir vos billets, d'être prévenu en cas de modification majeure sur
+                votre événement (annulation, report...). d'accéder à votre compte et à l'historique de vos commandes,
+                de recevoir des offres marketing adaptées et de faciliter vos prochaines commandes. Vous pouvez à tout
+                moment exercer votre droit de rétractation en vous connectant à votre compte client ou en cliquant sur
+                le lien prévu à cet effet dans les e-mails qui vous sont envoyés. Pour plus d'informations, vous pouvez
+                consulter notre <a href="#" class="notice-link">politique de confidentialité</a>. Le paragraphe <a
+                    href="#" class="notice-link">"vos choix et vos droits"</a> vous explique comment exercer vos
+                droits.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
