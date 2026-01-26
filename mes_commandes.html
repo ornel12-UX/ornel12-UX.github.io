@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-       /* Reset and Base Styles */
+        /* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,8 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.5;
     color: #1a1a1a;
-    background: #ffffff;
+    background: #f6f7f9;
+    /* Light grey background like Ticketmaster */
     overflow-x: hidden;
 }
 
@@ -115,7 +117,7 @@ body {
 /* Ticketmaster Header */
 .ticketmaster-header {
     background: var(--tm-blue);
-    padding: 12px 0;
+    padding: 8px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -249,9 +251,11 @@ body {
 
 /* Account Menu */
 .account-menu {
-    background: var(--tm-light-gray);
-    padding: 15px 0;
-    border-bottom: 1px solid var(--tm-border);
+    background: #f6f7f9;
+    padding: 20px 0 0;
+    /* Reduced bottom padding to merge with content */
+    border-bottom: none;
+    /* Seamless flow */
 }
 
 .menu-container {
@@ -284,12 +288,12 @@ body {
 
 .menu-item.active {
     background: transparent;
-    color: var(--tm-dark);
+    color: var(--tm-blue);
 }
 
 .icon-circle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border: 2px solid #d0d0d0;
     border-radius: 50%;
     display: flex;
@@ -306,9 +310,155 @@ body {
 }
 
 .menu-icon {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     stroke-width: 2;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Header Reorganization for Mobile */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    /* Search Bar takes full width below header */
+    .search-container {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .search-wrapper {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-input {
+        padding: 12px 50px 12px 15px;
+    }
+
+    .page-title {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .filter-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    /* Improve button touch areas for form */
+    .btn-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--tm-blue);
+        padding: 12px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+        background: white;
+    }
+
+    .btn-link:hover {
+        background: #f0f8ff;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-center {
+        flex: 1;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .location-text {
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+        border: none;
+    }
+
+    .icon-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Keep menu items in 2 columns (handled by parent grid), 
+       but adjust padding/sizing inside */
+    /* Force side-by-side layout on mobile */
+    .menu-item {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        font-size: 0.75rem;
+        padding: 6px 8px;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .icon-circle {
+        width: 36px;
+        height: 36px;
+        margin: 0 !important;
+        flex-shrink: 0;
+        /* Important: prevents circle from squishing */
+    }
+
+    .menu-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .empty-state {
+        padding: 15px;
+    }
+
+    .notice-text {
+        font-size: 0.65rem;
+    }
+
+    /* Form Mobile Adjustments */
+    .info-card {
+        padding: 0 10px;
+    }
+
+    .form-control {
+        font-size: 16px;
+        /* Prevents auto-zoom on iOS */
+        padding: 12px;
+    }
+
+    .date-fields {
+        gap: 5px;
+    }
 }
 
 .icon-circle.active .menu-icon {
@@ -420,9 +570,36 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
 
+    /* Header Reorganization for Mobile */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-content {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    /* Search Bar takes full width below header */
+    .search-container {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .search-wrapper {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-input {
+        padding: 12px 50px 12px 15px;
+    }
 
     .page-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .filter-section {
@@ -432,50 +609,93 @@ body {
 
     .filter-select {
         width: 100%;
-        max-width: 300px;
+    }
+
+    /* Improve button touch areas for form */
+    .btn-link {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--tm-blue);
+        padding: 12px;
+        border-radius: 4px;
+        margin-bottom: 25px;
+        background: white;
+    }
+
+    .btn-link:hover {
+        background: #f0f8ff;
+        text-decoration: none;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-center {
+        flex: 1;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .location-text {
+        font-size: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .icon-btn {
         width: 32px;
         height: 32px;
+        border: none;
     }
 
     .icon-btn svg {
-        width: 16px;
-        height: 16px;
+        width: 20px;
+        height: 20px;
     }
 
-
+    /* Keep menu items in 2 columns (handled by parent grid), 
+       but adjust padding/sizing inside */
     .menu-item {
-        font-size: 0.85rem;
-        padding: 10px 12px;
-        gap: 10px;
+        font-size: 0.8rem;
+        padding: 8px 5px;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
     }
 
     .icon-circle {
         width: 40px;
         height: 40px;
-    }
-
-    .menu-icon {
-        width: 20px;
-        height: 20px;
+        margin: 0 auto;
     }
 
     .empty-state {
-        padding: 20px;
+        padding: 15px;
     }
 
     .notice-text {
         font-size: 0.65rem;
     }
 
+    /* Form Mobile Adjustments */
+    .info-card {
+        padding: 0 10px;
+    }
+
+    .form-control {
+        font-size: 16px;
+        /* Prevents auto-zoom on iOS */
+        padding: 12px;
+    }
+
+    .date-fields {
+        gap: 5px;
+    }
 }
 
 /* Order Card Styles */
@@ -682,68 +902,97 @@ body {
 
 /* Info Card Styles */
 .info-card {
+    position: relative;
+    width: 100%;
     max-width: 500px;
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: 15px auto 40px;
+    /* Reduced top margin for tight flow */
+    background: #fff;
+    border: 1px solid var(--tm-border);
+    padding: 40px 50px;
+    /* Wider side padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    /* Smoother shadow */
+    box-sizing: border-box;
+}
+
+.page-title-inner {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #212529;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .info-intro {
     font-size: 14px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 25px;
 }
 
+/* Styled as outlined button like reference */
 .btn-link {
-    background: none;
-    border: none;
-    color: var(--tm-blue);
+    display: block;
+    width: fit-content;
+    background: white;
+    border: 1px solid #026cdf;
+    color: #026cdf;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    padding: 0;
-    margin-bottom: 20px;
-    display: inline-block;
+    padding: 10px 24px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    transition: all 0.2s;
 }
 
 .btn-link:hover {
-    text-decoration: underline;
+    background: #f0f8ff;
+    border-color: #0056b3;
+    text-decoration: none;
 }
 
 /* Form Styles */
 .info-form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
+    /* Slightly increased gap between fields */
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    /* Tighter gap between label and input */
 }
 
 .form-group label {
-    font-size: 13px;
-    font-weight: 500;
-    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    color: #212529;
 }
 
 .form-control {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid var(--tm-border);
-    border-radius: 4px;
-    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    /* Sharper corners */
+    font-size: 15px;
     font-family: inherit;
-    color: #333;
+    color: #000;
     background: white;
+    font-weight: 500;
 }
 
 .form-control:focus {
     outline: none;
     border-color: var(--tm-blue);
+    box-shadow: 0 0 0 0.1rem rgba(2, 108, 223, 0.15);
 }
 
 .form-control::placeholder {
@@ -753,22 +1002,29 @@ body {
 /* Radio Buttons */
 .radio-row {
     display: flex;
-    gap: 20px;
-    margin-bottom: 10px;
+    gap: 30px;
+    /* Wider gap like reference */
+    margin-bottom: 5px;
+    align-items: center;
 }
 
 .radio-label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+    /* Match input font size */
+    color: #000;
 }
 
 .radio-label input[type="radio"] {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    margin: 0;
+    accent-color: #026cdf;
+    /* Use brand blue for selection */
 }
 
 /* Password Field */
@@ -804,49 +1060,141 @@ body {
 }
 
 /* Phone Field */
-.phone-field {
+.phone-input-wrapper {
     display: flex;
-    gap: 8px;
     align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    background: white;
+    overflow: hidden;
 }
 
-.phone-field .flag {
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 12px;
+    cursor: pointer;
+    background: #fdfdfd;
+}
+
+.country-selector .flag {
     font-size: 20px;
 }
 
-.phone-field .form-control {
+.country-selector .chevron-down {
+    width: 10px;
+    height: 10px;
+    color: #666;
+}
+
+.phone-separator {
+    width: 1px;
+    height: 24px;
+    background: #eee;
+    margin: 0 5px;
+}
+
+.phone-input-wrapper .phone-input {
+    border: none;
+    padding: 12px 10px;
     flex: 1;
 }
 
+.phone-input-wrapper .phone-input:focus {
+    box-shadow: none;
+}
+
 /* Date Fields */
-.date-fields {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+.date-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
 }
 
-/* Info Text */
-.info-text {
+.date-section .main-label {
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.date-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.date-field-group label {
     font-size: 13px;
-    line-height: 1.6;
     color: #666;
-    margin: 10px 0;
+    font-weight: 400;
 }
 
-/* Consent Text */
-.consent-text {
-    font-size: 12px;
-    line-height: 1.6;
-    color: #666;
-    margin: 15px 0;
+/* Horizontal Divider */
+.form-divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 30px 0 10px;
+    /* Reduced bottom margin */
 }
 
-.consent-text p {
-    margin-bottom: 10px;
+/* Info Text with separator */
+.info-text {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #444;
+    margin: 0 0 15px;
+    /* Removed top margin */
 }
 
-.consent-text a {
-    color: var(--tm-blue);
+/* Consent Section with square checkboxes */
+.consent-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0 30px;
+}
+
+.consent-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.consent-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #ced4da;
+    border-radius: 2px;
+    appearance: none;
+    background: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.consent-item input[type="checkbox"]:checked {
+    background-color: #026cdf;
+    border-color: #026cdf;
+}
+
+.consent-item input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    left: 4px;
+    top: 0;
+}
+
+.consent-item a {
+    color: #026cdf;
     text-decoration: underline;
 }
 
@@ -854,16 +1202,19 @@ body {
 .btn-full {
     width: 100%;
     margin-top: 10px;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 15px;
 }
 
 /* Select Styling */
 select.form-control {
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1.5'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 16px;
-    padding-right: 35px;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 40px;
 }
     </style>
 </head>
@@ -879,9 +1230,9 @@ select.form-control {
             </div>
             <div class="nav-center">
                 <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2">
-                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                    <circle cx="12" cy="10" r="3" />
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                 </svg>
                 <span class="location-text">Événements dans votre ville</span>
             </div>
@@ -948,11 +1299,12 @@ select.form-control {
         <div class="menu-container">
             <button class="menu-item active">
                 <div class="icon-circle active">
-                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 5l11 3-2 8-11-3z" />
+                        <path d="M4 9l11 3-2 8-11-3z" />
+                        <path d="M9 13.5l1.5.4" />
+                        <path d="M13.5 10l1.5.4" />
                     </svg>
                 </div>
                 <span>Mes commandes</span>
@@ -960,12 +1312,15 @@ select.form-control {
 
             <button class="menu-item">
                 <div class="icon-circle">
-                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="6" width="18" height="12" rx="2" />
+                        <path d="M7 12h3" />
+                        <path d="M7 15h3" />
+                        <path d="M14 9h4" />
+                        <path d="M14 12h4" />
+                        <path d="M14 15h4" />
+                        <circle cx="8.5" cy="9.5" r="1.5" />
                     </svg>
                 </div>
                 <span>Mes informations</span>
@@ -973,10 +1328,11 @@ select.form-control {
 
             <button class="menu-item">
                 <div class="icon-circle">
-                    <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9" />
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                        <circle cx="12" cy="17" r="1" />
                     </svg>
                 </div>
                 <span>Alertes E-mail</span>
@@ -995,7 +1351,6 @@ select.form-control {
     </section>
 
     <!-- Main Content -->
-    <main class="main-content">
         <div class="content-container">
             <!-- Section Mes Commandes -->
             <div id="section-commandes" class="content-section active">
@@ -1053,9 +1408,8 @@ select.form-control {
 
             <!-- Section Mes Informations -->
             <div id="section-informations" class="content-section">
-                <h1 class="page-title">MES INFORMATIONS</h1>
-
                 <div class="info-card">
+                    <h1 class="page-title-inner">MES INFORMATIONS</h1>
                     <p class="info-intro">
                         Modifiez à tout moment vos informations, puis cliquez sur "Modifier mes Informations" pour
                         valider la modification.
@@ -1127,39 +1481,58 @@ select.form-control {
                         <!-- Code postal -->
                         <div class="form-group">
                             <label>Code postal</label>
-                            <input type="text" class="form-control" value="76000">
+                            <input type="text" class="form-control" value="75003">
                         </div>
 
                         <!-- Ville -->
                         <div class="form-group">
                             <label>Ville</label>
-                            <input type="text" class="form-control" value="PARIS">
+                            <input type="text" class="form-control" value="PARIS 03">
                         </div>
 
                         <!-- Téléphone -->
                         <div class="form-group">
                             <label>Numéro de téléphone</label>
-                            <div class="phone-field">
-                                <span class="flag">🇫🇷</span>
-                                <input type="tel" class="form-control" value="+33758173013">
+                            <div class="phone-input-wrapper">
+                                <div class="country-selector">
+                                    <span class="flag">🇫🇷</span>
+                                    <svg class="chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="phone-separator"></div>
+                                <input type="tel" class="form-control phone-input" value="+33756944605">
                             </div>
                         </div>
 
                         <!-- Date de naissance -->
-                        <div class="form-group">
-                            <label>Date de naissance</label>
-                            <div class="date-fields">
+                        <div class="form-group date-section">
+                            <label class="main-label">Date de naissance</label>
+
+                            <div class="date-field-group">
+                                <label>Jour</label>
                                 <select class="form-control">
-                                    <option>Jour</option>
+                                    <option value=""></option>
                                 </select>
+                            </div>
+
+                            <div class="date-field-group">
+                                <label>Mois</label>
                                 <select class="form-control">
-                                    <option>Mois</option>
+                                    <option value=""></option>
                                 </select>
+                            </div>
+
+                            <div class="date-field-group">
+                                <label>Année</label>
                                 <select class="form-control">
-                                    <option>Année</option>
+                                    <option value=""></option>
                                 </select>
                             </div>
                         </div>
+
+                        <hr class="form-divider">
 
                         <!-- Info bancaire -->
                         <p class="info-text">
@@ -1176,17 +1549,19 @@ select.form-control {
                         </div>
 
                         <!-- Consentements -->
-                        <div class="consent-text">
-                            <p>
-                                Oui, je souhaite être informé des préventes, actualités ou bons plans concerts et
-                                spectacles, de manière personnalisée en fonction des informations que Ticketmaster
-                                détient à mon sujet et de la façon dont j'interagis avec parc de loisirs, Ticketmaster.
-                            </p>
-                            <p>
-                                J'autorise la personnalisation de mon expérience en ligne et des communications que je
-                                reçois avec mes préférences. Pour plus d'informations visitez notre <a
-                                    href="#">politique de confidentialité</a>.
-                            </p>
+                        <div class="consent-section">
+                            <label class="consent-item">
+                                <input type="checkbox" name="newsletter">
+                                <span>Oui, je souhaite être informé(e) des préventes, actualités ou bons plans
+                                    (concerts, spectacles, expositions, parcs de loisirs...) de la part de
+                                    Ticketmaster.</span>
+                            </label>
+                            <label class="consent-item">
+                                <input type="checkbox" name="personalization">
+                                <span>J'autorise la personnalisation de mon expérience en ligne et des communications
+                                    que je reçois avec mes préférences. Pour plus d'informations visitez notre <a
+                                        href="#" class="notice-link">politique de confidentialité</a>.</span>
+                            </label>
                         </div>
 
                         <!-- Bouton de soumission -->
@@ -1195,7 +1570,6 @@ select.form-control {
                 </div>
             </div>
         </div>
-    </main>
 
     <script>
         // Navigation entre les sections
@@ -1208,13 +1582,17 @@ select.form-control {
                 menuItems.forEach(mi => {
                     mi.classList.remove('active');
                     const circle = mi.querySelector('.icon-circle');
-                    if (circle) circle.classList.remove('active');
+                    if (circle) {
+                        circle.classList.remove('active');
+                    }
                 });
 
                 // Ajouter la classe active à l'item cliqué
                 this.classList.add('active');
                 const circle = this.querySelector('.icon-circle');
-                if (circle) circle.classList.add('active');
+                if (circle) {
+                    circle.classList.add('active');
+                }
 
                 // Masquer toutes les sections
                 sections.forEach(section => section.classList.remove('active'));
@@ -1249,6 +1627,4 @@ select.form-control {
     </footer>
 </body>
 
-
 </html>
-
