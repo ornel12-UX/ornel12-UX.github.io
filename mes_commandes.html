@@ -26,7 +26,7 @@
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                 </svg>
-                <span>Événements dans votre ville</span>
+                <span class="location-text">Événements dans votre ville</span>
             </div>
             <div class="nav-right">
                 <a href="#" class="help-link">Aide</a>
@@ -140,58 +140,237 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="content-container">
-            <h1 class="page-title">MES COMMANDES</h1>
+            <!-- Section Mes Commandes -->
+            <div id="section-commandes" class="content-section active">
+                <h1 class="page-title">MES COMMANDES</h1>
 
-            <div class="card">
-                <div class="header">Détail de votre commande</div>
-                <div class="top">
-                    <div class="top-content">
-                        <div class="poster">
-                            <img src="n_guns-n-roses-world-tour-2026_p.webp" alt="Image aperçu">
+                <div class="card">
+                    <div class="header">Détail de votre commande</div>
+                    <div class="top">
+                        <div class="top-content">
+                            <div class="poster">
+                                <img src="n_guns-n-roses-world-tour-2026_p.webp" alt="Image aperçu">
+                            </div>
+                            <div class="info">
+                                <div class="title">GUNS N' ROSES - WORLD TOUR 2026</div>
+                                <div class="line">1 Juil 2026 19:00</div>
+                                <div class="line">ACCOR ARENA - PARIS</div>
+                                <div class="line"><a href="#">ACCOR ARENA</a></div>
+                            </div>
                         </div>
-                        <div class="info">
-                            <div class="title">GUNS N' ROSES - WORLD TOUR 2026</div>
-                            <div class="line">1 Juil 2026 19:00</div>
-                            <div class="line">ACCOR ARENA - PARIS</div>
-                            <div class="line"><a href="#">ACCOR ARENA</a></div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <div style="font-weight: 700;">4 billets</div>
+                            <div>TARIF NORMAL</div>
+                            <div>CATEGORIE OR</div>
+                            <div>Porte O - rang 26 - place 15 - FAUTEUIL</div>
+                            <div>Porte O - rang 26 - place 16 - FAUTEUIL</div>
+                            <div>Porte O - rang 26 - place 17 - FAUTEUIL</div>
+                            <div>Porte O - rang 26 - place 18 - FAUTEUIL</div>
+                            <div>4 x 199.50 €</div>
+                        </div>
+                        <div class="right">
+                            <div class="price">798.00 €</div>
                         </div>
                     </div>
-                </div>
-                <div class="bottom">
-                    <div class="left">
-                        <div style="font-weight: 700;">4 billets</div>
-                        <div>TARIF NORMAL</div>
-                        <div>CATEGORIE OR</div>
-                        <div>Porte O - rang 26 - place 15 - FAUTEUIL</div>
-                        <div>Porte O - rang 26 - place 16 - FAUTEUIL</div>
-                        <div>Porte O - rang 26 - place 17 - FAUTEUIL</div>
-                        <div>Porte O - rang 26 - place 18 - FAUTEUIL</div>
-                        <div>4 x 199.50 €</div>
+                    <div class="summary">
+                        <div class="left">
+                            <div style="font-weight: 700;">Montant de la réservation</div>
+                            <div style="font-weight: 700;">Frais de service</div>
+                            <div style="font-weight: 700;">Total de la commande</div>
+                        </div>
+                        <div class="right">
+                            <div class="prix">798.00 €</div>
+                            <div class="prix">1.65 €</div>
+                            <div class="prix" style="font-weight: 700;">799.65 €</div>
+                        </div>
                     </div>
-                    <div class="right">
-                        <div class="price">798.00 €</div>
-                    </div>
-                </div>
-                <div class="summary">
-                    <div class="left">
-                        <div style="font-weight: 700;">Montant de la réservation</div>
-                        <div style="font-weight: 700;">Frais de service</div>
-                        <div style="font-weight: 700;">Total de la commande</div>
-                    </div>
-                    <div class="right">
-                        <div class="prix">798.00 €</div>
-                        <div class="prix">1.65 €</div>
-                        <div class="prix" style="font-weight: 700;">799.65 €</div>
+                    <!-- Footer avec boutons de téléchargement -->
+                    <div class="footer">
+                        <button class="btn btn-primary">Télécharger les billets dans l'app</button>
+                        <button class="btn btn-secondary">Télécharger les billets en pdf</button>
                     </div>
                 </div>
-                <!-- Footer avec boutons de téléchargement -->
-                <div class="footer">
-                    <button class="btn btn-primary">Télécharger les billets dans l'app</button>
-                    <button class="btn btn-secondary">Télécharger les billets en pdf</button>
+            </div>
+
+            <!-- Section Mes Informations -->
+            <div id="section-informations" class="content-section">
+                <h1 class="page-title">MES INFORMATIONS</h1>
+
+                <div class="info-card">
+                    <p class="info-intro">
+                        Modifiez à tout moment vos informations, puis cliquez sur "Modifier mes Informations" pour
+                        valider la modification.
+                    </p>
+
+                    <button class="btn-link">Modifier mon mot de passe</button>
+
+                    <form class="info-form">
+                        <!-- Genre -->
+                        <div class="form-row radio-row">
+                            <label class="radio-label">
+                                <input type="radio" name="genre" value="madame">
+                                <span>Madame</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="genre" value="monsieur" checked>
+                                <span>Monsieur</span>
+                            </label>
+                        </div>
+
+                        <!-- Nom -->
+                        <div class="form-group">
+                            <label>Nom</label>
+                            <input type="text" class="form-control" value="DE MARCO">
+                        </div>
+
+                        <!-- Prénom -->
+                        <div class="form-group">
+                            <label>Prénom</label>
+                            <input type="text" class="form-control" value="NATHALIE">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label>Adresse e-mail</label>
+                            <input type="email" class="form-control" value="malagasako736@gmail.com">
+                        </div>
+
+                        <!-- Mot de passe -->
+                        <div class="form-group">
+                            <label>Mot de passe</label>
+                            <div class="password-field">
+                                <input type="password" class="form-control" placeholder="Mot de passe">
+                                <button type="button" class="toggle-password">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                            <small class="field-error">Ce champ est obligatoire</small>
+                        </div>
+
+                        <!-- Adresse -->
+                        <div class="form-group">
+                            <label>Numéro et libellé de la voie</label>
+                            <input type="text" class="form-control" placeholder="ex : 1 rue de la Gare">
+                        </div>
+
+                        <!-- Pays -->
+                        <div class="form-group">
+                            <label>Pays</label>
+                            <select class="form-control">
+                                <option value="FRANCE" selected>FRANCE</option>
+                            </select>
+                        </div>
+
+                        <!-- Code postal -->
+                        <div class="form-group">
+                            <label>Code postal</label>
+                            <input type="text" class="form-control" value="76000">
+                        </div>
+
+                        <!-- Ville -->
+                        <div class="form-group">
+                            <label>Ville</label>
+                            <input type="text" class="form-control" value="PARIS">
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="form-group">
+                            <label>Numéro de téléphone</label>
+                            <div class="phone-field">
+                                <span class="flag">🇫🇷</span>
+                                <input type="tel" class="form-control" value="+33758173013">
+                            </div>
+                        </div>
+
+                        <!-- Date de naissance -->
+                        <div class="form-group">
+                            <label>Date de naissance</label>
+                            <div class="date-fields">
+                                <select class="form-control">
+                                    <option>Jour</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>Mois</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>Année</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Info bancaire -->
+                        <p class="info-text">
+                            Pour faciliter le remboursement en cas d'annulation d'un événement et effectuer le paiement
+                            de vos billets par virement, nous vous conseillons de renseigner vos coordonnées bancaires.
+                            Pour cela, veuillez dans un premier temps, renseigner le pays de votre banque :
+                        </p>
+
+                        <div class="form-group">
+                            <label>Pays de la banque</label>
+                            <select class="form-control">
+                                <option value="">Sélectionner...</option>
+                            </select>
+                        </div>
+
+                        <!-- Consentements -->
+                        <div class="consent-text">
+                            <p>
+                                Oui, je souhaite être informé des préventes, actualités ou bons plans concerts et
+                                spectacles, de manière personnalisée en fonction des informations que Ticketmaster
+                                détient à mon sujet et de la façon dont j'interagis avec parc de loisirs, Ticketmaster.
+                            </p>
+                            <p>
+                                J'autorise la personnalisation de mon expérience en ligne et des communications que je
+                                reçois avec mes préférences. Pour plus d'informations visitez notre <a
+                                    href="#">politique de confidentialité</a>.
+                            </p>
+                        </div>
+
+                        <!-- Bouton de soumission -->
+                        <button type="submit" class="btn btn-primary btn-full">Modifier mes informations</button>
+                    </form>
                 </div>
             </div>
         </div>
     </main>
+
+    <script>
+        // Navigation entre les sections
+        const menuItems = document.querySelectorAll('.menu-item');
+        const sections = document.querySelectorAll('.content-section');
+
+        menuItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                // Retirer la classe active de tous les items
+                menuItems.forEach(mi => {
+                    mi.classList.remove('active');
+                    const circle = mi.querySelector('.icon-circle');
+                    if (circle) circle.classList.remove('active');
+                });
+
+                // Ajouter la classe active à l'item cliqué
+                this.classList.add('active');
+                const circle = this.querySelector('.icon-circle');
+                if (circle) circle.classList.add('active');
+
+                // Masquer toutes les sections
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Afficher la section correspondante
+                if (index === 0) {
+                    document.getElementById('section-commandes').classList.add('active');
+                } else if (index === 1) {
+                    document.getElementById('section-informations').classList.add('active');
+                }
+            });
+        });
+    </script>
 
     <!-- Footer Notice -->
     <footer class="footer-notice">
