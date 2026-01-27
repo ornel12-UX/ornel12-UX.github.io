@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketmaster France - Confirmation de commande</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ticketmaster-blue: #1a8cff;
+            --border-color: #d9d9d9;
+            --text-color: #000000;
+            --heading-color: #3ba7cc;
+            --bg-color: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            /* Removed side padding */
+            color: var(--text-color);
+            line-height: 1.1;
+            font-size: 3px;
+        }
+
+        .container {
+            max-width: 100%;
+            /* Full width */
+            margin: 0;
+            /* No auto margins */
+            background-color: var(--bg-color);
+            padding: 6px;
+            box-shadow: none;
+            /* Remove shadow */
+        }
+
+        header {
+            background-color: #0276E7;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 4px 6px;
+            margin-bottom: 8px;
+        }
+
+        .logo {
+            margin-right: 5px;
+        }
+
+        .t-logo {
+            background-color: #026CDB;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            font-size: 9px;
+            width: 9px;
+            height: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1px;
+            font-style: italic;
+        }
+
+        .brand {
+            font-size: 4px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .info-section {
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            color: #026CDB;
+            font-size: 4px;
+            margin-bottom: 2px;
+            font-weight: 600;
+        }
+
+        .data-table,
+        .tickets-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table td {
+            border: 0.5px solid #d9d9d9;
+            padding: 1px 2px;
+            font-size: 3px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .data-table td:first-child {
+            width: 40%;
+        }
+
+        .data-table tr:first-child td {
+            background-color: #f5f5f5;
+            /* Light gray background for first row */
+        }
+
+        .tickets-table th,
+        .tickets-table td {
+            border: 0.5px solid #d9d9d9;
+            padding: 1px 2px;
+            text-align: left;
+            font-size: 3px;
+        }
+
+        .tickets-table th {
+            background-color: #ddefff;
+            font-weight: 700;
+            color: #000000;
+            text-transform: uppercase;
+        }
+
+        .tickets-table tbody tr td {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .tickets-table .total-label {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .tickets-table .total-value {
+            font-weight: 700;
+        }
+
+        .tickets-table .empty-cell {
+            border: none;
+            background-color: transparent;
+        }
+
+        .footer-notes {
+            margin-top: 5px;
+            line-height: 1.2;
+            font-size: 3px;
+        }
+
+        .footer-notes p {
+            margin: 2px 0;
+        }
+
+        footer {
+            margin-top: 8px;
+            font-size: 2px;
+            color: #666;
+            text-align: center;
+            border-top: 0.5px solid #eee;
+            padding-top: 3px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                width: 100%;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="t-logo">t</span>
+            </div>
+            <div class="brand">TICKETMASTER FRANCE</div>
+        </header>
+
+        <section class="info-section">
+            <h2>Informations de la commande</h2>
+            <table class="data-table">
+                <tr>
+                    <td>Nom du client</td>
+                    <td>WYATT DORANGEVILLE</td>
+                </tr>
+                <tr>
+                    <td>Adresse email</td>
+                    <td>wyattdorangville@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>Commande n°</td>
+                    <td>268953196-GE</td>
+                </tr>
+                <tr>
+                    <td>Date de commande</td>
+                    <td>24/01/2026 à 15:09</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="info-section">
+            <h2>Détails de l'événement</h2>
+            <table class="data-table">
+                <tr>
+                    <td>Événement</td>
+                    <td>BTS WORLD TOUR</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Vendredi 17 juillet 2026 à 20:00</td>
+                </tr>
+                <tr>
+                    <td>Lieu</td>
+                    <td>STADE DE FRANCE</td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td>ZAC DU CORNILLON NORD - 93200 ST DENIS</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="info-section">
+            <h2>Détails des billets</h2>
+            <table class="tickets-table">
+                <thead>
+                    <tr>
+                        <th>EMPLACEMENT</th>
+                        <th>CATÉGORIE</th>
+                        <th>TARIF</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vomitoire E6 - rang 41 - place 37 - COQUE</td>
+                        <td>CATÉGORIE 1</td>
+                        <td>166,50 €</td>
+                        <td>166,50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Vomitoire E6 - rang 41 - place 36 - COQUE</td>
+                        <td>CATÉGORIE 1</td>
+                        <td>166,50 €</td>
+                        <td>166,50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Vomitoire E6 - rang 41 - place 35 - COQUE</td>
+                        <td>CATÉGORIE 1</td>
+                        <td>166,50 €</td>
+                        <td>166,50 €</td>
+                    </tr>
+                    <tr>
+                        <td>Vomitoire E6 - rang 41 - place 34 - COQUE</td>
+                        <td>CATÉGORIE 1</td>
+                        <td>166,50 €</td>
+                        <td>166,50 €</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="total-label">TOTAL TTC</td>
+                        <td class="total-value">666,00 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <div class="footer-notes">
+            <p><strong>Mode de livraison : Billets électroniques</strong></p>
+            <p><strong>Mode de paiement : Carte bancaire (**** **** **** 7399)</strong></p>
+            <p><strong>Billets disponibles sur votre espace billetterie</strong></p>
+            <p><strong>Attention : vos billets sont nominatifs, modifiables et transférables seulement depuis
+                    votre espace billetterie Ticketmaster jusqu'au 17/07/2026 - 18h00</strong></p>
+        </div>
+
+        <footer>
+            Ticketmaster France SAS au capital de 3 000 000€ - RCS Nanterre 412 888 153 - Siège social : 2 rue Maurice
+            Mallet, 92130 Issy-les-Moulineaux - TVA Intracom FR 32 412 888 133 - Représentant légal : Président
+        </footer>
+    </div>
+</body>
+
+</html>
