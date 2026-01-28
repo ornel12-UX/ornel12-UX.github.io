@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LOA France - Vente, Location et Location avec Option d'Achat de voitures neuves et d'occasion. Trouvez votre véhicule idéal.">
+    <meta name="keywords" content="voiture, vente voiture, location voiture, LOA, Peugeot, Renault, Citroën, DS">
+    <title>LOA France - Achetez, Louez ou Financez Votre Voiture</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-car-side"></i> LOA France
+            </div>
+            
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#vehicules">Véhicules</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#loa">LOA</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="flex items-center gap-4">
+                <button class="btn-icon hide-mobile">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="btn btn-primary hide-mobile">
+                    Demander un Devis
+                </button>
+                <div class="navbar-toggle" id="navbarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero gradient-overlay" id="accueil">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fadeIn">
+                    Trouvez Votre Voiture Idéale
+                </h1>
+                <p class="hero-subtitle animate-fadeIn" style="animation-delay: 0.2s;">
+                    Achat, Location ou LOA - Les meilleures offres de véhicules en France
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="hero-search animate-fadeIn" style="animation-delay: 0.4s;">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-tab="buy">
+                            <i class="fas fa-shopping-cart"></i> Acheter
+                        </button>
+                        <button class="search-tab" data-tab="rent">
+                            <i class="fas fa-key"></i> Louer
+                        </button>
+                        <button class="search-tab" data-tab="loa">
+                            <i class="fas fa-file-contract"></i> LOA
+                        </button>
+                    </div>
+                    
+                    <div class="search-form">
+                        <div class="search-field">
+                            <i class="fas fa-car"></i>
+                            <select id="brandSelect">
+                                <option value="">Marque</option>
+                                <option value="peugeot">Peugeot</option>
+                                <option value="renault">Renault</option>
+                                <option value="citroen">Citroën</option>
+                                <option value="ds">DS</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-field">
+                            <i class="fas fa-tag"></i>
+                            <select id="typeSelect">
+                                <option value="">Type</option>
+                                <option value="citadine">Citadine</option>
+                                <option value="berline">Berline</option>
+                                <option value="suv">SUV</option>
+                                <option value="electrique">Électrique</option>
+                            </select>
+                        </div>
+                        
+                        <div class="search-field">
+                            <i class="fas fa-euro-sign"></i>
+                            <select id="budgetSelect">
+                                <option value="">Budget</option>
+                                <option value="0-15000">0 - 15 000 €</option>
+                                <option value="15000-25000">15 000 - 25 000 €</option>
+                                <option value="25000-35000">25 000 - 35 000 €</option>
+                                <option value="35000+">35 000 € +</option>
+                            </select>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-search">
+                            <i class="fas fa-search"></i> Rechercher
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Stats -->
+                <div class="hero-stats animate-fadeIn" style="animation-delay: 0.6s;">
+                    <div class="stat-item">
+                        <div class="stat-number">1500+</div>
+                        <div class="stat-label">Véhicules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Clients Satisfaits</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <i class="fas fa-bolt"></i>
+                <div class="promo-text">
+                    <strong>Offre Spéciale :</strong> LOA dès 199€/mois sur véhicules électriques
+                </div>
+                <a href="#loa" class="promo-link">
+                    Découvrir <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title reveal">Nos Services</h2>
+                <p class="section-subtitle reveal">Des solutions adaptées à tous vos besoins automobiles</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">Achat</h3>
+                    <p class="service-description">
+                        Large choix de véhicules neufs et d'occasion avec garantie et certification
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Véhicules certifiés</li>
+                        <li><i class="fas fa-check"></i> Garantie constructeur</li>
+                        <li><i class="fas fa-check"></i> Financement sur mesure</li>
+                    </ul>
+                    <button class="btn btn-secondary">
+                        En savoir plus
+                    </button>
+                </div>
+                
+                <div class="service-card card featured reveal">
+                    <div class="service-badge">Populaire</div>
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3 class="service-title">LOA</h3>
+                    <p class="service-description">
+                        Location avec option d'achat flexible, changez de voiture tous les 2-3 ans
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Mensualités fixes</li>
+                        <li><i class="fas fa-check"></i> Option d'achat finale</li>
+                        <li><i class="fas fa-check"></i> Entretien inclus</li>
+                    </ul>
+                    <button class="btn btn-primary">
+                        Calculer ma LOA
+                    </button>
+                </div>
+                
+                <div class="service-card card reveal">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="service-title">Location</h3>
+                    <p class="service-description">
+                        Location courte ou longue durée avec assurance et assistance 24/7
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Flexibilité totale</li>
+                        <li><i class="fas fa-check"></i> Assurance tous risques</li>
+                        <li><i class="fas fa-check"></i> Véhicules récents</li>
+                    </ul>
+                    <button class="btn btn-secondary">
+                        Louer maintenant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Vehicles -->
+    <section class="section bg-white" id="vehicules">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title reveal">Véhicules en Vedette</h2>
+                    <p class="section-subtitle reveal">Découvrez notre sélection de voitures premium</p>
+                </div>
+                <a href="catalogue.html" class="btn btn-secondary reveal">
+                    Voir tout le catalogue <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- Les véhicules seront chargés dynamiquement via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- LOA Calculator Section -->
+    <section class="section loa-section gradient-primary" id="loa">
+        <div class="container">
+            <div class="loa-content">
+                <div class="loa-info reveal">
+                    <h2 class="text-white">Calculateur LOA</h2>
+                    <p class="text-white" style="opacity: 0.9; margin-bottom: var(--space-6);">
+                        Estimez vos mensualités en quelques clics
+                    </p>
+                    
+                    <div class="loa-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-euro-sign"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white">Mensualités Fixes</h4>
+                                <p class="text-white" style="opacity: 0.8;">Budgétisez facilement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white">Flexibilité</h4>
+                                <p class="text-white" style="opacity: 0.8;">Changez de véhicule régulièrement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white">Garantie Incluse</h4>
+                                <p class="text-white" style="opacity: 0.8;">Roulez l'esprit tranquille</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-card card reveal">
+                    <h3>Simulez votre LOA</h3>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label for="carPrice">Prix du véhicule</label>
+                            <div class="input-with-icon">
+                                <input type="number" id="carPrice" value="25000" min="5000" max="80000" step="1000">
+                                <span class="input-unit">€</span>
+                            </div>
+                            <input type="range" id="carPriceRange" min="5000" max="80000" step="1000" value="25000" class="range-slider">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="downPayment">Apport initial</label>
+                            <div class="input-with-icon">
+                                <input type="number" id="downPayment" value="2500" min="0" max="20000" step="500">
+                                <span class="input-unit">€</span>
+                            </div>
+                            <input type="range" id="downPaymentRange" min="0" max="20000" step="500" value="2500" class="range-slider">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duration">Durée</label>
+                            <div class="input-with-icon">
+                                <input type="number" id="duration" value="36" min="24" max="72" step="12">
+                                <span class="input-unit">mois</span>
+                            </div>
+                            <input type="range" id="durationRange" min="24" max="72" step="12" value="36" class="range-slider">
+                        </div>
+                        
+                        <div class="calculator-result">
+                            <div class="result-label">Votre mensualité estimée</div>
+                            <div class="result-amount" id="monthlyPayment">299 €</div>
+                            <div class="result-info">
+                                <span>Valeur résiduelle: <strong id="residualValue">12 500 €</strong></span>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Demander cette offre
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title reveal">Ce Que Disent Nos Clients</h2>
+                <p class="section-subtitle reveal">Plus de 5000 clients satisfaits nous font confiance</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card card reveal">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Service impeccable ! J'ai trouvé ma Peugeot 3008 en LOA avec des mensualités très abordables. L'équipe est très professionnelle."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="author-name">Marie Dubois</div>
+                            <div class="author-location">Paris</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card reveal">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "LOA France m'a permis d'acheter ma première voiture électrique. Le processus était simple et rapide. Je recommande !"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="author-name">Thomas Martin</div>
+                            <div class="author-location">Lyon</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card card reveal">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excellent rapport qualité-prix. J'ai loué un DS 7 pour 6 mois, véhicule impeccable et service client réactif."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <div class="author-name">Sophie Bernard</div>
+                            <div class="author-location">Marseille</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section gradient-overlay">
+        <div class="container">
+            <div class="cta-content text-center reveal">
+                <h2 class="text-white">Prêt à Trouver Votre Voiture ?</h2>
+                <p class="text-white" style="opacity: 0.9; font-size: var(--text-lg); margin-bottom: var(--space-8);">
+                    Commencez votre recherche dès maintenant ou contactez nos conseillers
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fas fa-search"></i> Parcourir le Catalogue
+                    </button>
+                    <button class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i> Nous Contacter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-logo">
+                        <i class="fas fa-car-side"></i> LOA France
+                    </h3>
+                    <p class="footer-description">
+                        Votre partenaire de confiance pour l'achat, la location et le financement de véhicules en France.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Achat de véhicules</a></li>
+                        <li><a href="#">Location courte durée</a></li>
+                        <li><a href="#">Location longue durée</a></li>
+                        <li><a href="#">LOA</a></li>
+                        <li><a href="#">Financement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">À Propos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Qui sommes-nous</a></li>
+                        <li><a href="#">Nos engagements</a></li>
+                        <li><a href="#">Garanties</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@loafrance.fr</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Paris, France</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Lun-Sam: 9h-19h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LOA France. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
