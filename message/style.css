@@ -1,0 +1,301 @@
+:root {
+    --bg-color: #ffffff;
+    --incoming-bubble: #fdf0e7;
+    --outgoing-bubble: #ffffff;
+    --text-color: #333333;
+    --accent-color: #f7b794;
+    --check-color: #e67e22;
+    --input-bg: #f5f5f5;
+    --header-border: #eeeeee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.chat-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--header-border);
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.ticket-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ticket-image img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.ticket-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-title {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.ticket-price {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Message List */
+/* Message Divider */
+.message-divider {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin: 15px 0 10px;
+    font-weight: 500;
+}
+
+.message-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message {
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message.incoming {
+    align-self: flex-end;
+    /* Note: The images show Peach bubbles are on the right, and text is in French */
+}
+
+.message.outgoing {
+    align-self: flex-start;
+}
+
+/* Redefining based on images:
+   Peachy/Pink bubbles are Right (Incoming/Sent by me?) 
+   White bubbles are Left (Received?)
+   Actually, looking at "Oui c'est disponible" (Peach, right), "Je prends..." (White, left).
+   So Incoming (Peach) = Right, Outgoing (White) = Left.
+*/
+
+.message.incoming {
+    align-self: flex-end;
+}
+
+.message.incoming .bubble {
+    background-color: var(--incoming-bubble);
+    border-radius: 12px 12px 0 12px;
+}
+
+.message.outgoing {
+    align-self: flex-start;
+}
+
+.message.outgoing .bubble {
+    background-color: var(--outgoing-bubble);
+    border: 1px solid #ddd;
+    border-radius: 12px 12px 12px 0;
+}
+
+.bubble {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+.status {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.checks {
+    color: var(--check-color);
+    font-weight: bold;
+}
+
+/* Special Bubbles */
+.hidden-text {
+    background: #2ecc71;
+    color: #2ecc71;
+    border-radius: 10px;
+    display: inline-block;
+    height: 14px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 10px 0;
+}
+
+.capture-approved {
+    color: #2e7d32;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+/* File Bubble */
+.file-bubble {
+    padding: 10px !important;
+    min-width: 200px;
+}
+
+.message.outgoing .file-bubble {
+    background: #fff;
+    border: 1px solid #ddd !important;
+    border-radius: 18px !important;
+}
+
+.message.incoming .file-bubble {
+    background: #ffffff;
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 18px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.file-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 2px;
+}
+
+.file-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+.file-icon.pdf {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #d32f2f;
+    font-weight: 600;
+}
+
+.file-icon.doc {
+    background: #f5e6d8;
+    font-size: 1.4rem;
+}
+
+.file-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #2c2c2c;
+}
+
+.file-details {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+/* Input Area */
+.chat-input-container {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-top: 1px solid var(--header-border);
+}
+
+.add-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-wrapper {
+    flex: 1;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.send-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-btn svg {
+    margin-left: 2px;
+}
