@@ -1,0 +1,451 @@
+/* ===================================
+   Native App UI Theme
+   =================================== */
+:root {
+    --bg-color: #F3F0E7;
+    /* Elegant Beige */
+    --card-bg: #FFFFFF;
+    /* White cards */
+    --primary: #B8860B;
+    /* Dark Goldenrod (Classy with beige) */
+    --text-primary: #1A1A1A;
+    /* Near Black */
+    --text-secondary: #66605B;
+    /* Warm Grey */
+    --border-color: #E0DCD5;
+    --separator: #E0DCD5;
+
+    --safe-area-top: env(safe-area-inset-top);
+    --safe-area-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    padding-top: calc(50px + var(--safe-area-top));
+    /* Space for fixed header */
+}
+
+/* ===================================
+   Top Navigation (App Bar)
+   =================================== */
+.app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: calc(50px + var(--safe-area-top));
+    padding-top: var(--safe-area-top);
+    background: rgba(243, 240, 231, 0.9);
+    /* Beige translucent */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centered */
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1000;
+    border-bottom: 0.5px solid var(--border-color);
+}
+
+.app-bar-title {
+    font-weight: 600;
+    font-size: 17px;
+    text-align: center;
+    width: 100%;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ===================================
+   Hero Media
+   =================================== */
+.media-hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    /* Standard real estate photo ratio */
+    background: #000;
+    margin-bottom: 16px;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.sound-toggle-mini {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* Play Overlay */
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.play-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.play-icon-circle {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.play-overlay:active .play-icon-circle {
+    transform: scale(0.9);
+}
+
+/* ===================================
+   Content & Layout
+   =================================== */
+.content-padding {
+    padding: 0 15px;
+    /* Modern iOS Standard */
+}
+
+.property-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    /* Stack on mobile for better space */
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.property-price {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.property-location {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tags-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #EBE6D8;
+    color: var(--text-primary);
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    /* Softer corners */
+    font-weight: 500;
+}
+
+/* ===================================
+   Specs Scroller
+   =================================== */
+.specs-scroller {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 15px 24px;
+    scrollbar-width: none;
+    /* Hide scrollbar */
+    mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+}
+
+.specs-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.spec-card {
+    background: var(--card-bg);
+    min-width: 90px;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    /* Subtle shadow for white cards */
+}
+
+.spec-icon {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.spec-value {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-primary);
+}
+
+.spec-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.separator {
+    height: 1px;
+    background: var(--separator);
+    margin: 16px;
+}
+
+/* ===================================
+   Gallery Swipe Section
+   =================================== */
+.section-container {
+    padding-bottom: 16px;
+}
+
+.section-heading {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding: 0 15px;
+}
+
+.gallery-track-wrapper {
+    overflow-x: auto;
+    padding: 0 15px;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+    /* Scroll room */
+}
+
+.gallery-track-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 12px;
+}
+
+.gallery-item {
+    position: relative;
+    min-width: 240px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-caption {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}
+
+/* ===================================
+   Description
+   =================================== */
+.text-body {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #D1D1D6;
+    margin-bottom: 8px;
+}
+
+.text-body.collapsed {
+    display: none;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 0;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ===================================
+   Map Placeholder
+   =================================== */
+.map-placeholder {
+    width: 100%;
+    height: 150px;
+    background: #242426;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    background-image: radial-gradient(#3a3a3c 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.map-pin {
+    font-size: 24px;
+    position: relative;
+}
+
+.map-pin::after {
+    content: '📍';
+    font-size: 32px;
+}
+
+/* ===================================
+   Floating Action Bar (Footer)
+   =================================== */
+.action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    /* White translucent */
+    backdrop-filter: blur(20px);
+    padding: 12px 15px calc(12px + var(--safe-area-bottom));
+    border-top: 0.5px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.action-price .label {
+    display: block;
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.action-price .val {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.primary-btn {
+    background: var(--text-primary);
+    /* Black button for contrast */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-btn:active {
+    opacity: 0.8;
+}
+
+@media (min-width: 600px) {
+    body {
+        max-width: 480px;
+        /* Force mobile width on desktop */
+        margin: 0 auto;
+        border-right: 1px solid #333;
+        border-left: 1px solid #333;
+        min-height: 100vh;
+    }
+
+    .app-bar,
+    .action-bar {
+        max-width: 480px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

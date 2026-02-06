@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#121212">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Appartement Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="app-bar">
+        <h2 class="app-bar-title">Visite Virtuelle</h2>
+    </nav>
+
+    <!-- Main Scrollable Content -->
+    <main class="app-content">
+
+        <!-- Hero Media: Video -->
+        <div class="media-hero" id="hero-container">
+            <video class="hero-video" playsinline poster="thumbnail.jpg" id="main-video">
+                <source src="visite vituelle.mp4" type="video/mp4">
+            </video>
+
+            <!-- Play Button Overlay -->
+            <div class="play-overlay">
+                <div class="play-icon-circle">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="media-badge">Visite 3D</div>
+            <button class="sound-toggle-mini">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Property Header Info -->
+        <div class="content-padding header-info">
+            <div class="price-row">
+                <h1 class="property-title">Appartement T2 Moderne</h1>
+                <span class="property-price">Nous consulter</span>
+            </div>
+            <p class="property-location">La Trinité • Résidence Moderne (2012)</p>
+
+            <div class="tags-row">
+                <span class="tag">Terrasse 15m²</span>
+                <span class="tag">Climatisation</span>
+                <span class="tag">DPE B</span>
+                <span class="tag">Garage en sus</span>
+            </div>
+        </div>
+
+        <!-- Key Specs Grid -->
+        <div class="specs-scroller">
+            <div class="spec-card">
+                <span class="spec-icon">📐</span>
+                <span class="spec-value">46 m²</span>
+                <span class="spec-label">Surface</span>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">☀️</span>
+                <span class="spec-value">15 m²</span>
+                <span class="spec-label">Terrasse</span>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">�️</span>
+                <span class="spec-value">1</span>
+                <span class="spec-label">Chambre</span>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">🏢</span>
+                <span class="spec-value">1e</span>
+                <span class="spec-label">Étage</span>
+            </div>
+            <div class="spec-card">
+                <span class="spec-icon">⚡</span>
+                <span class="spec-value">B</span>
+                <span class="spec-label">DPE</span>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Image Gallery (Horizontal Click/Swipe) -->
+        <div class="section-container">
+            <h2 class="section-heading">Galerie</h2>
+            <div class="gallery-track-wrapper">
+                <div class="gallery-track">
+                    <div class="gallery-item">
+                        <img src="Vuesaloncomplet.png" alt="Salon Lumineux">
+                        <span class="img-caption">Séjour</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Vuesalon.png" alt="Cuisine Moderne">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Cuisine.png" alt="Cuisine Équipée">
+                        <span class="img-caption">Cuisine Premium</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Chambre.png" alt="Chambre">
+                        <span class="img-caption">Chambre</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="Douche.png" alt="Salle d'eau">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Description -->
+        <div class="content-padding description-block">
+            <h2 class="section-heading">À propos ce bien</h2>
+            <p class="text-body">
+                Au sein d’une résidence moderne (2012) avec ascenseur, découvrez ce superbe T2 de 46m². Pièce de vie
+                lumineuse ouvrant sur une grande terrasse de 15m² exposée Ouest.
+            </p>
+            <p class="text-body collapsed" id="more-text">
+                Cuisine haut de gamme intégrée, chambre confortable avec rangements, salle d'eau soignée et
+                climatisation réversible. DPE B (excellente performance).<br><br>
+                Garage fermé disponible en sus (18 000€). Charges faibles (92€/mois). Idéal premier achat ou
+                investissement.
+            </p>
+            <button class="read-more-btn">Lire la suite</button>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Map / Location Placeholder -->
+        <div class="content-padding">
+            <h2 class="section-heading">Localisation</h2>
+            <div class="map-placeholder">
+                <div class="map-pin">
+                    <div class="pin-pulse"></div>
+                </div>
+                <span>La Trinité (06340)</span>
+            </div>
+        </div>
+
+        <!-- Bottom Padding for Floating Bar -->
+        <div style="height: 100px;"></div>
+    </main>
+
+    <!-- Floating Action Bar -->
+    <footer class="action-bar">
+        <div class="action-price">
+            <span class="label">Prix</span>
+            <span class="val">Nous consulter</span>
+        </div>
+        <button class="primary-btn pulse-effect">
+            Contacter Müller Erwin
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
