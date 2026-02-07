@@ -1,7 +1,221 @@
-// Native App Interaction Script
+// Enhanced Video Control System
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. "Read More" Toggle
+    // DOM Elements
+    const video = document.getElementById('main-video');
+    const heroContainer = document.getElementById('hero-container');
+    const playOverlay = document.getElementById('play-overlay');
+    const videoControls = document.getElementById('video-controls');
+
+    // Control Elements
+    const playPauseBtn = document.getElementById('play-pause-btn');
+    const playIcon = document.getElementById('play-icon');
+    const pauseIcon = document.getElementById('pause-icon');
+    const rewindBtn = document.getElementById('rewind-btn');
+    const forwardBtn = document.getElementById('forward-btn');
+    const soundToggle = document.getElementById('sound-toggle');
+    const muteIcon = document.getElementById('mute-icon');
+    const unmuteIcon = document.getElementById('unmute-icon');
+
+    // Progress Elements
+    const progressBar = document.getElementById('progress-bar');
+    const progressFilled = document.getElementById('progress-filled');
+    const currentTimeDisplay = document.getElementById('current-time');
+    const durationDisplay = document.getElementById('duration');
+
+    // State
+    let isSeeking = false;
+
+    // ===================================
+    // Utility Functions
+    // ===================================
+
+    function formatTime(seconds) {
+        if (isNaN(seconds)) return '0:00';
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    // ===================================
+    // Play/Pause Functionality
+    // ===================================
+
+    function togglePlayPause() {
+        if (video.paused) {
+            video.play();
+            playOverlay.classList.add('hidden');
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+        } else {
+            video.pause();
+            playOverlay.classList.remove('hidden');
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        }
+    }
+
+    // Event Listeners for Play/Pause
+    if (playOverlay) {
+        playOverlay.addEventListener('click', togglePlayPause);
+    }
+
+    if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            togglePlayPause();
+        });
+    }
+
+    if (video) {
+        video.addEventListener('click', togglePlayPause);
+
+        video.addEventListener('ended', () => {
+            playOverlay.classList.remove('hidden');
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+        });
+    }
+
+    // ===================================
+    // Rewind/Forward Functionality
+    // ===================================
+
+    if (rewindBtn) {
+        rewindBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            video.currentTime = Math.max(0, video.currentTime - 10);
+
+            // Visual feedback
+            rewindBtn.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                rewindBtn.style.transform = 'scale(1)';
+            }, 150);
+        });
+    }
+
+    if (forwardBtn) {
+        forwardBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            video.currentTime = Math.min(video.duration, video.currentTime + 10);
+
+            // Visual feedback
+            forwardBtn.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                forwardBtn.style.transform = 'scale(1)';
+            }, 150);
+        });
+    }
+
+    // ===================================
+    // Sound Toggle Functionality
+    // ===================================
+
+    if (soundToggle && video) {
+        // Initialize muted
+        video.muted = true;
+
+        soundToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            video.muted = !video.muted;
+
+            if (video.muted) {
+                muteIcon.style.display = 'block';
+                unmuteIcon.style.display = 'none';
+            } else {
+                muteIcon.style.display = 'none';
+                unmuteIcon.style.display = 'block';
+            }
+        });
+    }
+
+    // ===================================
+    // Progress Bar Functionality
+    // ===================================
+
+    if (video && progressBar && progressFilled) {
+        // Update progress bar as video plays
+        video.addEventListener('timeupdate', () => {
+            if (!isSeeking && video.duration) {
+                const progress = (video.currentTime / video.duration) * 100;
+                progressFilled.style.width = `${progress}%`;
+                currentTimeDisplay.textContent = formatTime(video.currentTime);
+            }
+        });
+
+        // Update duration when metadata loads
+        video.addEventListener('loadedmetadata', () => {
+            durationDisplay.textContent = formatTime(video.duration);
+        });
+
+        // Seek functionality
+        progressBar.addEventListener('click', (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const percentage = clickX / rect.width;
+            const newTime = percentage * video.duration;
+
+            video.currentTime = newTime;
+        });
+
+        // Touch support for progress bar
+        progressBar.addEventListener('touchstart', (e) => {
+            isSeeking = true;
+            e.preventDefault();
+        });
+
+        progressBar.addEventListener('touchmove', (e) => {
+            if (isSeeking) {
+                const touch = e.touches[0];
+                const rect = progressBar.getBoundingClientRect();
+                const touchX = touch.clientX - rect.left;
+                const percentage = Math.max(0, Math.min(1, touchX / rect.width));
+                const newTime = percentage * video.duration;
+
+                video.currentTime = newTime;
+                progressFilled.style.width = `${percentage * 100}%`;
+                currentTimeDisplay.textContent = formatTime(newTime);
+                e.preventDefault();
+            }
+        });
+
+        progressBar.addEventListener('touchend', () => {
+            isSeeking = false;
+        });
+    }
+
+    // ===================================
+    // Keyboard Controls (Bonus)
+    // ===================================
+
+    document.addEventListener('keydown', (e) => {
+        if (!video) return;
+
+        switch (e.key) {
+            case ' ':
+            case 'k':
+                e.preventDefault();
+                togglePlayPause();
+                break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                video.currentTime = Math.max(0, video.currentTime - 10);
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                break;
+            case 'm':
+                e.preventDefault();
+                if (soundToggle) soundToggle.click();
+                break;
+        }
+    });
+
+    // ===================================
+    // Read More Toggle
+    // ===================================
+
     const readMoreBtn = document.querySelector('.read-more-btn');
     const moreText = document.getElementById('more-text');
 
@@ -20,76 +234,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Video Control System (Play/Pause/Sound)
-    const heroContainer = document.getElementById('hero-container');
-    const heroVideo = document.getElementById('main-video');
-    const playOverlay = document.querySelector('.play-overlay');
-    const soundBtn = document.querySelector('.sound-toggle-mini');
-    const soundIcon = soundBtn ? soundBtn.querySelector('svg') : null;
+    // ===================================
+    // Gallery Interaction
+    // ===================================
 
-    if (heroContainer && heroVideo && playOverlay) {
-
-        // Toggle Play/Pause on container click
-        function togglePlay() {
-            if (heroVideo.paused) {
-                heroVideo.play();
-                playOverlay.classList.add('hidden');
-            } else {
-                heroVideo.pause();
-                playOverlay.classList.remove('hidden');
-            }
-        }
-
-        playOverlay.addEventListener('click', togglePlay);
-
-        // Also allow clicking video directly to pause if controls are hidden
-        heroVideo.addEventListener('click', togglePlay);
-
-        // Show overlay again when video ends
-        heroVideo.addEventListener('ended', () => {
-            playOverlay.classList.remove('hidden');
-        });
-    }
-
-    // Sound Toggle Logic
-    if (soundBtn && heroVideo) {
-        // Initialize muted
-        heroVideo.muted = true;
-
-        soundBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent toggling play when clicking sound
-
-            heroVideo.muted = !heroVideo.muted;
-
-            if (heroVideo.muted) {
-                soundBtn.style.backgroundColor = 'rgba(0,0,0,0.6)';
-                if (soundIcon) soundIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>`;
-            } else {
-                soundBtn.style.backgroundColor = 'rgba(10, 132, 255, 0.8)';
-                if (soundIcon) soundIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93L19.07 4.93C20.9447 6.80528 21.9979 9.34836 21.9979 12C21.9979 14.6516 20.9447 17.1947 19.07 19.07M15.54 8.46C16.4774 9.39764 17.004 10.6692 17.004 12C17.004 13.3308 16.4774 14.6024 15.54 15.54" stroke="currentColor" stroke-width="2"/>`;
-            }
-        });
-    }
-
-    // 3. Simple Gallery Interaction (Optional: could add lightbox)
     const galleryItems = document.querySelectorAll('.gallery-item');
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Simple bounce effect to indicate interactivity
             item.style.transform = 'scale(0.98)';
             setTimeout(() => item.style.transform = 'scale(1)', 150);
         });
     });
 
-    // 4. Back Button (Mock Navigation)
-    const backBtn = document.querySelector('.back-btn');
-    if (backBtn) {
-        backBtn.addEventListener('click', () => {
-            alert('Retour liste des biens');
-        });
-    }
+    // ===================================
+    // Contact Button
+    // ===================================
 
-    // 5. Contact Button Haptic
     const contactBtn = document.querySelector('.primary-btn');
     if (contactBtn) {
         contactBtn.addEventListener('click', () => {

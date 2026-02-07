@@ -32,7 +32,7 @@
             </video>
 
             <!-- Play Button Overlay -->
-            <div class="play-overlay">
+            <div class="play-overlay" id="play-overlay">
                 <div class="play-icon-circle">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                         <path d="M8 5v14l11-7z" />
@@ -40,14 +40,66 @@
                 </div>
             </div>
 
+            <!-- Custom Video Controls -->
+            <div class="video-controls" id="video-controls">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar">
+                        <div class="progress-filled" id="progress-filled"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="controls-row">
+                    <button class="control-btn" id="rewind-btn" title="Reculer de 10 secondes">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38" />
+                        </svg>
+                        <span class="skip-label">-10s</span>
+                    </button>
+
+                    <button class="control-btn play-pause-btn" id="play-pause-btn">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"
+                            id="play-icon">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none"
+                            id="pause-icon" style="display: none;">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                    </button>
+
+                    <button class="control-btn" id="forward-btn" title="Avancer de 10 secondes">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38" />
+                        </svg>
+                        <span class="skip-label">+10s</span>
+                    </button>
+
+                    <button class="control-btn" id="sound-toggle">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" id="mute-icon">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" id="unmute-icon" style="display: none;">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
             <div class="media-badge">Visite 3D</div>
-            <button class="sound-toggle-mini">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                    <line x1="23" y1="9" x2="17" y2="15"></line>
-                    <line x1="17" y1="9" x2="23" y2="15"></line>
-                </svg>
-            </button>
         </div>
 
         <!-- Property Header Info -->
@@ -128,32 +180,28 @@
 
         <!-- Description -->
         <div class="content-padding description-block">
-            <h2 class="section-heading">À propos ce bien</h2>
+            <h2 class="section-heading">À propos de ce bien</h2>
             <p class="text-body">
-                Au sein d’une résidence moderne (2012) avec ascenseur, découvrez ce superbe T2 de 46m². Pièce de vie
-                lumineuse ouvrant sur une grande terrasse de 15m² exposée Ouest.
+                <strong>Bel appartement 2 pièces meublé de 46 m² – Immeuble sécurisé</strong><br><br>
+                Situé au 1er étage avec ascenseur d'un immeuble calme et sécurisé, ce charmant appartement de 46 m²
+                bénéficie d'une belle exposition offrant une excellente luminosité.
             </p>
             <p class="text-body collapsed" id="more-text">
-                Cuisine haut de gamme intégrée, chambre confortable avec rangements, salle d'eau soignée et
-                climatisation réversible. DPE B (excellente performance).<br><br>
-                Garage fermé disponible en sus (18 000€). Charges faibles (92€/mois). Idéal premier achat ou
-                investissement.
+                <strong>Il se compose de :</strong><br><br>
+                • Un séjour agréable et lumineux, aménagé avec un canapé, une table basse, une table à manger avec
+                chaises ainsi que de nombreux rangements.<br><br>
+                • Une cuisine entièrement équipée comprenant une plaque de cuisson, une hotte, un four, un réfrigérateur
+                et des espaces de rangement.<br><br>
+                • Une chambre spacieuse et indépendante, dotée d'un lit double et d'un grand placard.<br><br>
+                • Une salle d'eau moderne avec lavabo, douche et WC.<br><br>
+                Les locataires disposent également de prestations appréciables : garage, ascenseur, local poubelles et
+                gardien dans la résidence.
             </p>
             <button class="read-more-btn">Lire la suite</button>
         </div>
 
         <div class="separator"></div>
 
-        <!-- Map / Location Placeholder -->
-        <div class="content-padding">
-            <h2 class="section-heading">Localisation</h2>
-            <div class="map-placeholder">
-                <div class="map-pin">
-                    <div class="pin-pulse"></div>
-                </div>
-                <span>La Trinité (06340)</span>
-            </div>
-        </div>
 
         <!-- Bottom Padding for Floating Bar -->
         <div style="height: 100px;"></div>
