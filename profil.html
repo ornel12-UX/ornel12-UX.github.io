@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profil</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #F0F4F9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+    }
+    
+
+    .header {
+      background: white;
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+      position: relative;
+    }
+    .header .back {
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
+    .header h1 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #5A7B9A;
+    }
+
+    .content {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .username-card {
+      padding: 16px 18px;
+    }
+    .username-card .username {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1E2F3A;
+    }
+    .username-card .aff {
+      font-size: 13px;
+      color: #7F8C9A;
+      margin-top: 3px;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #5A7B9A;
+      padding: 10px 4px 6px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid #F0F4F9;
+    }
+    .row:last-child { border-bottom: none; }
+    .row .label { font-size: 15px; color: #1E2F3A; }
+    .row .value { font-size: 15px; color: #80919A; }
+
+    .action-card {
+      background: white;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 18px;
+    }
+    .action-card .label { font-size: 15px; color: #1E2F3A; }
+    .action-card.logout .label { color: #C0392B; }
+    .chevron-right {
+        stroke: #5A7B9A;
+        opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="back">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5A7B9A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+    </div>
+    <h1>Profil</h1>
+  </div>
+
+  <div class="content">
+
+    <!-- Username -->
+    <div class="card username-card">
+      <div class="username">pasquo1399</div>
+      <div class="aff">Aff ID: 1113691</div>
+    </div>
+
+    <!-- Coordonnées -->
+    <div>
+      <div class="section-label">Coordonnées</div>
+      <div class="card">
+        <div class="row"><span class="label">Prénom</span><span class="value">Pasquo</span></div>
+        <div class="row"><span class="label">Nom de famille</span><span class="value">Ouikoun</span></div>
+        <div class="row"><span class="label">Téléphone</span><span class="value">+22956515063</span></div>
+        <div class="row"><span class="label">Other</span><span class="value">+22956515063</span></div>
+      </div>
+    </div>
+
+    <!-- Informations de paiement -->
+    <div>
+      <div class="section-label">Informations de paiement</div>
+      <div class="card">
+        <div class="row"><span class="label">Méthode de paiement</span><span class="value">Player account</span></div>
+        <div class="row"><span class="label">Customer account</span><span class="value">455969919</span></div>
+      </div>
+    </div>
+
+    <!-- Changer de mot de passe -->
+    <div class="action-card">
+      <span class="label">Changer de mot de passe</span>
+      <!-- Chevron droit SVG gris -->
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </div>
+
+    <!-- Se déconnecter -->
+    <div class="action-card logout">
+      <span class="label">Se déconnecter</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#bbb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </div>
+
+  </div>
+</body>
+</html>
