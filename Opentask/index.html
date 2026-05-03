@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyOpenTask – Effectuez vos tâches, récoltez vos récompenses</title>
+  <meta name="description" content="Rejoignez MyOpenTask et commencez à gagner de l'argent en effectuant des tâches simples depuis votre smartphone. Retraits rapides via Visa Card." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">⚡</span>
+        <span class="logo__text">MyOpen<span class="logo__accent">Task</span></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link active" id="nav-accueil">Accueil</a></li>
+          <li><a href="taches.html" class="nav__link" id="nav-taches">Page de Tâche</a></li>
+          <li><a href="activer.html" class="nav__link" id="nav-activer">Activer mon compte</a></li>
+          <li><a href="retrait.html" class="nav__link" id="nav-retrait">Retrait / Carte Visa</a></li>
+          <li><a href="parrainage.html" class="nav__link" id="nav-parrainage">Parrainage</a></li>
+          <li><a href="partenariat.html" class="nav__link" id="nav-partenariat">Le Partenariat</a></li>
+          <li><a href="apropos.html" class="nav__link" id="nav-apropos">À Propos</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--cta" id="nav-contact">Contactez Nous</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="hero">
+    <div class="hero__bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge">🚀 Plateforme de micro-tâches #1</div>
+        <h1 class="hero__title">
+          Effectuez vos tâches <span class="text-gold">partout</span>,<br />
+          vos récompenses vous attendent <span class="text-gold">immédiatement</span>
+        </h1>
+        <p class="hero__subtitle">
+          Rejoignez des milliers d'utilisateurs qui gagnent de l'argent réel en accomplissant des tâches simples depuis leur smartphone, n'importe où dans le monde.
+        </p>
+        <div class="hero__actions">
+          <a href="taches.html" class="btn btn--primary btn--lg" id="hero-cta-decouvrir">Découvrir les tâches</a>
+          <a href="activer.html" class="btn btn--outline btn--lg" id="hero-cta-commencer">Commencer gratuitement</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <strong>+50K</strong>
+            <span>Membres actifs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>+100K</strong>
+            <span>Tâches complétées</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>24h</strong>
+            <span>Retrait rapide</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="phone-mockup">
+          <div class="phone-mockup__screen">
+            <div class="phone-screen-inner">
+              <div class="mock-task-card">
+                <div class="mock-task-header">
+                  <span class="mock-task-icon">✅</span>
+                  <span class="mock-task-title">Tâche complétée</span>
+                </div>
+                <div class="mock-task-reward">+2 500 FCFA</div>
+                <div class="mock-task-label">Récompense reçue !</div>
+              </div>
+              <div class="mock-balance">
+                <span class="mock-balance-label">Mon solde</span>
+                <span class="mock-balance-amount">47 800 FCFA</span>
+              </div>
+              <div class="mock-tasks-list">
+                <div class="mock-task-item">
+                  <span class="mock-item-dot gold"></span>
+                  <span>Regarder une vidéo</span>
+                  <span class="mock-item-reward">+500 F</span>
+                </div>
+                <div class="mock-task-item">
+                  <span class="mock-item-dot green"></span>
+                  <span>Sondage rapide</span>
+                  <span class="mock-item-reward">+800 F</span>
+                </div>
+                <div class="mock-task-item">
+                  <span class="mock-item-dot blue"></span>
+                  <span>Évaluation produit</span>
+                  <span class="mock-item-reward">+1 200 F</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badge badge-1">💰 Retrait validé !</div>
+        <div class="floating-badge badge-2">⭐ Tâche complète</div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Défiler pour en savoir plus</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ======= PARTNERS ======= -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <p class="partners__label">Nos partenaires de confiance</p>
+      <div class="partners__track-wrapper">
+        <div class="partners__track" id="partnersTrack">
+          <div class="partner-logo"><img src="assets/logos/tesla.svg" alt="Tesla" onerror="this.parentNode.innerHTML='Tesla'" /></div>
+          <div class="partner-logo"><img src="assets/logos/amazon.svg" alt="Amazon" onerror="this.parentNode.innerHTML='Amazon'" /></div>
+          <div class="partner-logo"><img src="assets/logos/alibaba.svg" alt="Alibaba" onerror="this.parentNode.innerHTML='Alibaba'" /></div>
+          <div class="partner-logo"><img src="assets/logos/ebay.svg" alt="eBay" onerror="this.parentNode.innerHTML='eBay'" /></div>
+          <div class="partner-logo"><img src="assets/logos/google.svg" alt="Google" onerror="this.parentNode.innerHTML='Google'" /></div>
+          <div class="partner-logo"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.parentNode.innerHTML='Microsoft'" /></div>
+          <!-- Duplicates for infinite scroll -->
+          <div class="partner-logo"><img src="assets/logos/tesla.svg" alt="Tesla" onerror="this.parentNode.innerHTML='Tesla'" /></div>
+          <div class="partner-logo"><img src="assets/logos/amazon.svg" alt="Amazon" onerror="this.parentNode.innerHTML='Amazon'" /></div>
+          <div class="partner-logo"><img src="assets/logos/alibaba.svg" alt="Alibaba" onerror="this.parentNode.innerHTML='Alibaba'" /></div>
+          <div class="partner-logo"><img src="assets/logos/ebay.svg" alt="eBay" onerror="this.parentNode.innerHTML='eBay'" /></div>
+          <div class="partner-logo"><img src="assets/logos/google.svg" alt="Google" onerror="this.parentNode.innerHTML='Google'" /></div>
+          <div class="partner-logo"><img src="assets/logos/microsoft.svg" alt="Microsoft" onerror="this.parentNode.innerHTML='Microsoft'" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CTA BANNER ======= -->
+  <section class="cta-banner" id="cta-banner">
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__content">
+        <h2>Faites partie d'une communauté active</h2>
+        <p>Profitez de vos premiers revenus dès maintenant et rejoignez des milliers de membres satisfaits</p>
+      </div>
+      <a href="activer.html" class="btn btn--gold btn--lg" id="cta-banner-btn">Rejoindre maintenant →</a>
+    </div>
+  </section>
+
+  <!-- ======= HOW IT WORKS ======= -->
+  <section class="how-it-works section" id="comment-ca-marche">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple & Rapide</span>
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <p class="section-subtitle">Commencez à gagner de l'argent en 3 étapes simples</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card" data-step="01">
+          <div class="step-card__icon-wrap">
+            <div class="step-card__icon">👤</div>
+          </div>
+          <h3>S'inscrire</h3>
+          <p>Créez votre compte gratuitement en quelques minutes. Aucune carte bancaire requise pour commencer.</p>
+          <a href="activer.html" class="step-card__link">Créer un compte →</a>
+        </div>
+        <div class="step-card" data-step="02">
+          <div class="step-card__icon-wrap">
+            <div class="step-card__icon">📋</div>
+          </div>
+          <h3>Réaliser les tâches</h3>
+          <p>Choisissez parmi des dizaines de tâches disponibles : sondages, évaluations, visionnage de vidéos et bien plus.</p>
+          <a href="taches.html" class="step-card__link">Voir les tâches →</a>
+        </div>
+        <div class="step-card" data-step="03">
+          <div class="step-card__icon-wrap">
+            <div class="step-card__icon">💳</div>
+          </div>
+          <h3>Retirer vos gains</h3>
+          <p>Transférez vos gains sur votre compte bancaire ou carte Visa sous 24h. Simple, rapide, sécurisé.</p>
+          <a href="retrait.html" class="step-card__link">En savoir plus →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FEATURES ======= -->
+  <section class="features section section--alt" id="features">
+    <div class="container">
+      <div class="features__inner">
+        <div class="features__content">
+          <span class="section-tag">Pourquoi nous choisir</span>
+          <h2 class="section-title">Tout ce dont vous avez besoin pour réussir</h2>
+          <ul class="features__list">
+            <li class="feature-item">
+              <div class="feature-item__icon">⚡</div>
+              <div>
+                <h4>Paiements instantanés</h4>
+                <p>Recevez vos récompenses immédiatement après validation de chaque tâche.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-item__icon">🌍</div>
+              <div>
+                <h4>Disponible partout</h4>
+                <p>Travaillez depuis n'importe où dans le monde, à tout moment de la journée.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-item__icon">🔒</div>
+              <div>
+                <h4>100% sécurisé</h4>
+                <p>Vos données et vos paiements sont protégés par des systèmes de sécurité avancés.</p>
+              </div>
+            </li>
+            <li class="feature-item">
+              <div class="feature-item__icon">📱</div>
+              <div>
+                <h4>Optimisé mobile</h4>
+                <p>Interface parfaite sur smartphone pour gagner de l'argent où que vous soyez.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="features__visual">
+          <div class="features__card-stack">
+            <div class="feat-card feat-card--back">
+              <div class="feat-card__top">
+                <span>💰 Gains du mois</span>
+              </div>
+              <div class="feat-card__amount">128 500 FCFA</div>
+            </div>
+            <div class="feat-card feat-card--front">
+              <div class="feat-card__header">
+                <span class="feat-card__label">Progression</span>
+                <span class="feat-card__badge">En hausse 📈</span>
+              </div>
+              <div class="feat-card__progress-wrap">
+                <div class="feat-card__progress-label"><span>Objectif mensuel</span><span>78%</span></div>
+                <div class="feat-card__progress-bar"><div class="feat-card__progress-fill" style="width:78%"></div></div>
+              </div>
+              <div class="feat-card__progress-wrap">
+                <div class="feat-card__progress-label"><span>Tâches validées</span><span>45/58</span></div>
+                <div class="feat-card__progress-bar"><div class="feat-card__progress-fill green" style="width:78%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SMARTPHONE SECTION ======= -->
+  <section class="mobile-section section" id="smartphone">
+    <div class="container mobile-section__inner">
+      <div class="mobile-section__visual">
+        <div class="phone-outline">
+          <div class="phone-outline__notch"></div>
+          <div class="phone-outline__screen">
+            <div class="phone-app-header">
+              <span>MyOpenTask</span>
+              <span class="phone-app-notif">3 🔔</span>
+            </div>
+            <div class="phone-app-balance">
+              <span>Solde disponible</span>
+              <strong>23 400 FCFA</strong>
+            </div>
+            <div class="phone-app-tasks">
+              <div class="phone-task">
+                <span class="phone-task-dot"></span>
+                <span>Regarder une pub</span>
+                <span>+350 F</span>
+              </div>
+              <div class="phone-task">
+                <span class="phone-task-dot active"></span>
+                <span>Tester une app</span>
+                <span>+1 500 F</span>
+              </div>
+              <div class="phone-task">
+                <span class="phone-task-dot"></span>
+                <span>Partager un lien</span>
+                <span>+200 F</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-section__content">
+        <span class="section-tag">Smartphone friendly</span>
+        <h2 class="section-title">As-tu un smartphone ?</h2>
+        <p>C'est tout ce dont tu as besoin ! Notre plateforme est entièrement optimisée pour mobile. Gagne de l'argent dans le bus, à la maison, au bureau — n'importe où, n'importe quand.</p>
+        <ul class="mobile-list">
+          <li>✅ Interface intuitive et légère</li>
+          <li>✅ Pas besoin d'une connexion rapide</li>
+          <li>✅ Notifications pour ne rater aucune tâche</li>
+          <li>✅ Compatible Android & iOS</li>
+        </ul>
+        <a href="activer.html" class="btn btn--primary btn--lg" id="mobile-cta">Démarrer sur mobile →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= TESTIMONIALS ======= -->
+  <section class="testimonials section section--alt" id="avis">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Témoignages</span>
+        <h2 class="section-title">Avis des utilisateurs</h2>
+        <p class="section-subtitle">Ce que nos membres disent de nous</p>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"J'ai pu retirer mes premiers gains dès la première semaine ! C'est vraiment simple et fiable. Je recommande à tout le monde."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">JK</div>
+            <div>
+              <strong>Jean-Koffi M.</strong>
+              <span>Membre depuis 6 mois</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"Grâce à MyOpenTask, je complète mon salaire chaque mois. Les tâches sont variées et les paiements toujours ponctuels. Excellent service !"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AM</div>
+            <div>
+              <strong>Aïcha B.</strong>
+              <span>Membre depuis 1 an</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-card__text">"Super plateforme ! Le système de parrainage m'a permis d'augmenter mes revenus significativement. Je gagne maintenant 50 000 F par mois."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">KD</div>
+            <div>
+              <strong>Kofi D.</strong>
+              <span>Membre depuis 8 mois</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= HELP / CONTACT CTA ======= -->
+  <section class="help-cta section" id="aide">
+    <div class="container help-cta__inner">
+      <div class="help-cta__icon">💬</div>
+      <h2>Besoin d'aide ?</h2>
+      <p>Notre équipe support est disponible 7j/7 pour répondre à toutes vos questions.</p>
+      <a href="contact.html" class="btn btn--primary btn--lg" id="help-contact-btn">Contactez Nous</a>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--light">
+          <span class="logo__icon">⚡</span>
+          <span class="logo__text">MyOpen<span class="logo__accent">Task</span></span>
+        </a>
+        <p>La plateforme de micro-tâches qui vous permet de gagner de l'argent réel, facilement et rapidement.</p>
+        <div class="footer__socials">
+          <a href="#" class="social-link" aria-label="Facebook" id="footer-facebook">f</a>
+          <a href="#" class="social-link" aria-label="Twitter" id="footer-twitter">𝕏</a>
+          <a href="#" class="social-link" aria-label="Instagram" id="footer-instagram">📷</a>
+          <a href="#" class="social-link" aria-label="WhatsApp" id="footer-whatsapp">💬</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="taches.html">Page de Tâche</a></li>
+          <li><a href="activer.html">Activer mon compte</a></li>
+          <li><a href="retrait.html">Retrait / Carte Visa</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Communauté</h4>
+        <ul>
+          <li><a href="parrainage.html">Parrainage</a></li>
+          <li><a href="partenariat.html">Le Partenariat</a></li>
+          <li><a href="apropos.html">À Propos</a></li>
+          <li><a href="contact.html">Contactez Nous</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li>📧 support@myopentask.com</li>
+          <li>📞 +225 XX XX XX XX XX</li>
+          <li>🕐 Lun – Sam : 8h – 20h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 MyOpenTask. Tous droits réservés.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

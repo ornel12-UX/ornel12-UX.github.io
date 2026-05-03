@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactez Nous – MyOpenTask</title>
+  <meta name="description" content="Contactez l'équipe MyOpenTask pour toute question ou demande d'information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__icon">⚡</span><span class="logo__text">MyOpen<span class="logo__accent">Task</span></span></a>
+      <nav class="nav" id="nav"><ul class="nav__list">
+        <li><a href="index.html" class="nav__link" id="nav-accueil">Accueil</a></li>
+        <li><a href="taches.html" class="nav__link" id="nav-taches">Page de Tâche</a></li>
+        <li><a href="activer.html" class="nav__link" id="nav-activer">Activer mon compte</a></li>
+        <li><a href="retrait.html" class="nav__link" id="nav-retrait">Retrait / Carte Visa</a></li>
+        <li><a href="parrainage.html" class="nav__link" id="nav-parrainage">Parrainage</a></li>
+        <li><a href="partenariat.html" class="nav__link" id="nav-partenariat">Le Partenariat</a></li>
+        <li><a href="apropos.html" class="nav__link" id="nav-apropos">À Propos</a></li>
+        <li><a href="contact.html" class="nav__link nav__link--cta active" id="nav-contact">Contactez Nous</a></li>
+      </ul></nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <span class="section-tag">Nous sommes là pour vous</span>
+      <h1 class="page-hero__title">Contactez Nous</h1>
+      <p class="page-hero__subtitle">Notre équipe est disponible 7j/7 pour répondre à toutes vos questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2 class="section-title">Informations de contact</h2>
+          <p style="color:var(--text-muted);margin-bottom:32px;">N'hésitez pas à nous contacter via l'un des canaux ci-dessous. Nous vous répondrons dans les meilleurs délais.</p>
+          <div class="contact-info__items">
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📧</div>
+              <div><h4>Email</h4><p>support@myopentask.com</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📞</div>
+              <div><h4>Téléphone / WhatsApp</h4><p>+225 XX XX XX XX XX</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">🕐</div>
+              <div><h4>Horaires</h4><p>Lundi – Samedi : 8h00 – 20h00</p></div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-item__icon">📍</div>
+              <div><h4>Localisation</h4><p>Afrique de l'Ouest – Service international</p></div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <h4>Suivez-nous</h4>
+            <div class="contact-socials__links">
+              <a href="#" class="social-link" id="contact-facebook" aria-label="Facebook">f</a>
+              <a href="#" class="social-link" id="contact-twitter" aria-label="Twitter">𝕏</a>
+              <a href="#" class="social-link" id="contact-instagram" aria-label="Instagram">📷</a>
+              <a href="#" class="social-link" id="contact-whatsapp" aria-label="WhatsApp">💬</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h2 class="section-title">Envoyer un message</h2>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Nom complet</label>
+              <input type="text" id="contact-name" name="name" placeholder="Votre nom complet" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Adresse email</label>
+              <input type="email" id="contact-email" name="email" placeholder="votre@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Sujet</label>
+              <select id="contact-subject" name="subject">
+                <option value="">Choisissez un sujet</option>
+                <option value="activation">Activation de compte</option>
+                <option value="retrait">Retrait / Paiement</option>
+                <option value="parrainage">Parrainage</option>
+                <option value="partenariat">Partenariat</option>
+                <option value="bug">Problème technique</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Décrivez votre demande en détail..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg contact-submit" id="contact-submit-btn">Envoyer le message →</button>
+            <div class="contact-form__success" id="formSuccess" style="display:none;">
+              <span>✅</span> Merci ! Votre message a été envoyé. Nous vous répondrons sous 24h.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand"><a href="index.html" class="logo"><span class="logo__icon">⚡</span><span class="logo__text">MyOpen<span class="logo__accent">Task</span></span></a><p>La plateforme de micro-tâches qui vous permet de gagner de l'argent réel.</p></div>
+      <div class="footer__col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="taches.html">Tâches</a></li><li><a href="activer.html">Activer</a></li></ul></div>
+      <div class="footer__col"><h4>Communauté</h4><ul><li><a href="parrainage.html">Parrainage</a></li><li><a href="partenariat.html">Partenariat</a></li><li><a href="apropos.html">À Propos</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>© 2025 MyOpenTask. Tous droits réservés.</p><div class="footer__bottom-links"><a href="#">Confidentialité</a><a href="#">CGU</a></div></div></div>
+  </footer>
+  <script src="app.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    if(form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('formSuccess').style.display = 'flex';
+        form.reset();
+        setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
+      });
+    }
+  </script>
+</body>
+</html>

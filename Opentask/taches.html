@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page de Tâches – MyOpenTask</title>
+  <meta name="description" content="Découvrez toutes les tâches disponibles sur MyOpenTask et commencez à gagner de l'argent dès maintenant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo"><span class="logo__icon">⚡</span><span class="logo__text">MyOpen<span class="logo__accent">Task</span></span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link" id="nav-accueil">Accueil</a></li>
+          <li><a href="taches.html" class="nav__link active" id="nav-taches">Page de Tâche</a></li>
+          <li><a href="activer.html" class="nav__link" id="nav-activer">Activer mon compte</a></li>
+          <li><a href="retrait.html" class="nav__link" id="nav-retrait">Retrait / Carte Visa</a></li>
+          <li><a href="parrainage.html" class="nav__link" id="nav-parrainage">Parrainage</a></li>
+          <li><a href="partenariat.html" class="nav__link" id="nav-partenariat">Le Partenariat</a></li>
+          <li><a href="apropos.html" class="nav__link" id="nav-apropos">À Propos</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--cta" id="nav-contact">Contactez Nous</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero__inner">
+      <span class="section-tag">Vos revenus commencent ici</span>
+      <h1 class="page-hero__title">Page de Tâches</h1>
+      <p class="page-hero__subtitle">Choisissez parmi nos tâches disponibles et commencez à gagner de l'argent réel dès aujourd'hui.</p>
+    </div>
+  </section>
+
+  <section class="section" id="tasks-section">
+    <div class="container">
+      <div class="tasks-info-banner">
+        <div class="tasks-info-item"><span class="tasks-info-icon">ℹ️</span><p>Pour accéder aux tâches, vous devez d'abord <strong>activer votre compte</strong>. C'est simple et rapide !</p></div>
+        <a href="activer.html" class="btn btn--gold" id="tasks-activate-btn">Activer mon compte →</a>
+      </div>
+
+      <div class="tasks-grid" id="tasksGrid">
+        <div class="task-card">
+          <div class="task-card__badge">Populaire</div>
+          <div class="task-card__icon">🎬</div>
+          <h3>Regarder une vidéo</h3>
+          <p>Visionnez des publicités courtes et gagnez des récompenses instantanées.</p>
+          <div class="task-card__footer">
+            <span class="task-reward">+500 FCFA</span>
+            <span class="task-duration">⏱ 2 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--primary task-btn" id="task-video-btn">Effectuer</a>
+        </div>
+        <div class="task-card">
+          <div class="task-card__icon">📊</div>
+          <h3>Sondage rapide</h3>
+          <p>Répondez à des questions simples sur vos habitudes de consommation.</p>
+          <div class="task-card__footer">
+            <span class="task-reward">+800 FCFA</span>
+            <span class="task-duration">⏱ 5 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--primary task-btn" id="task-sondage-btn">Effectuer</a>
+        </div>
+        <div class="task-card task-card--gold">
+          <div class="task-card__badge task-card__badge--gold">Premium</div>
+          <div class="task-card__icon">📱</div>
+          <h3>Tester une application</h3>
+          <p>Installez et testez une app mobile et partagez votre retour d'expérience.</p>
+          <div class="task-card__footer">
+            <span class="task-reward task-reward--gold">+1 500 FCFA</span>
+            <span class="task-duration">⏱ 10 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--gold task-btn" id="task-app-btn">Effectuer</a>
+        </div>
+        <div class="task-card">
+          <div class="task-card__icon">⭐</div>
+          <h3>Évaluer un produit</h3>
+          <p>Donnez votre avis sur des produits et services en ligne.</p>
+          <div class="task-card__footer">
+            <span class="task-reward">+1 200 FCFA</span>
+            <span class="task-duration">⏱ 8 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--primary task-btn" id="task-eval-btn">Effectuer</a>
+        </div>
+        <div class="task-card">
+          <div class="task-card__icon">🔗</div>
+          <h3>Partager un contenu</h3>
+          <p>Partagez des publications sur vos réseaux sociaux et gagnez.</p>
+          <div class="task-card__footer">
+            <span class="task-reward">+300 FCFA</span>
+            <span class="task-duration">⏱ 1 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--primary task-btn" id="task-share-btn">Effectuer</a>
+        </div>
+        <div class="task-card task-card--gold">
+          <div class="task-card__badge task-card__badge--gold">Bonus</div>
+          <div class="task-card__icon">🛍️</div>
+          <h3>Offre spéciale partenaire</h3>
+          <p>Effectuez une action chez nos partenaires et recevez une grosse récompense.</p>
+          <div class="task-card__footer">
+            <span class="task-reward task-reward--gold">+5 000 FCFA</span>
+            <span class="task-duration">⏱ 15 min</span>
+          </div>
+          <a href="activer.html" class="btn btn--gold task-btn" id="task-partner-btn">Effectuer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--light"><span class="logo__icon">⚡</span><span class="logo__text">MyOpen<span class="logo__accent">Task</span></span></a>
+        <p>La plateforme de micro-tâches qui vous permet de gagner de l'argent réel.</p>
+      </div>
+      <div class="footer__col"><h4>Navigation</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="taches.html">Tâches</a></li><li><a href="activer.html">Activer</a></li><li><a href="retrait.html">Retrait</a></li></ul></div>
+      <div class="footer__col"><h4>Communauté</h4><ul><li><a href="parrainage.html">Parrainage</a></li><li><a href="partenariat.html">Partenariat</a></li><li><a href="apropos.html">À Propos</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>© 2025 MyOpenTask. Tous droits réservés.</p><div class="footer__bottom-links"><a href="#">Confidentialité</a><a href="#">CGU</a></div></div></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
