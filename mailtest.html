@@ -7,12 +7,57 @@
 
     <script>
         window.onload = function () {
+
+            const subject = encodeURIComponent(
+                "Candidature - Emploi France / Canada"
+            );
+
+            const body = encodeURIComponent(
+`Bonjour,
+
+Je souhaite être accompagné(e) dans ma recherche d'emploi.
+
+Informations :
+
+Nom et prénom :
+Âge :
+Pays de résidence :
+Ville :
+Numéro WhatsApp :
+Adresse e-mail :
+
+Niveau d'études :
+Métier actuel :
+Années d'expérience :
+
+Destination souhaitée :
+☐ France
+☐ Canada
+
+Secteur recherché :
+☐ BTP
+☐ Agriculture
+☐ Restauration
+☐ Logistique
+☐ Industrie
+☐ Santé
+☐ Informatique
+☐ Autre :
+
+Date de disponibilité :
+
+Message complémentaire :
+
+Merci.`
+            );
+
             window.location.href =
-                "mailto:shinygrp@gmail.com?subject=Demande%20d'information&body=Bonjour,%0A%0AJe%20souhaite%20obtenir%20plus%20d'informations.%0A%0AMerci.";
+                `mailto:shinygrp@gmail.com?subject=${subject}&body=${body}`;
         };
     </script>
 </head>
 <body>
-    <p>Ouverture de votre messagerie...</p>
+    <h2>Préparation de votre candidature...</h2>
+    <p>Votre messagerie va s'ouvrir automatiquement.</p>
 </body>
 </html>
