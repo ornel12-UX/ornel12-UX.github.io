@@ -1,0 +1,19 @@
+/* Blog — thème clair premium */
+.blog-hero{padding:130px 0 56px;background:linear-gradient(135deg,rgba(15,46,33,0.96),rgba(45,106,79,0.9)),radial-gradient(circle at 80% 20%,rgba(82,183,136,0.35),transparent 55%);color:#fff}
+.blog-hero h1{color:#fff;font-size:clamp(34px,4.8vw,56px);margin-top:18px}
+.blog-hero p{color:rgba(255,255,255,.85);max-width:860px}
+.blog-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.blog-card{background:#fff;border:1px solid var(--pcs-border);border-radius:20px;padding:28px;box-shadow:var(--pcs-shadow-sm)}
+.blog-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--pcs-text-muted);margin:12px 0 20px}
+.blog-content h2{font-size:30px;margin-top:30px}
+.blog-content h3{font-size:24px;margin-top:26px;color:var(--pcs-green-700)}
+.blog-content h4{font-size:20px;margin-top:22px;color:var(--pcs-green-500)}
+.blog-content p,.blog-content li{line-height:1.75}
+.blog-content pre{background:#0F2E21;color:#E4F3EA;padding:16px;border-radius:12px;overflow:auto}
+.blog-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.blog-content blockquote{margin:18px 0;padding:14px 18px;border-left:4px solid var(--pcs-accent);background:var(--pcs-accent-soft);border-radius:8px}
+.blog-grid{display:grid;gap:20px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:800px){.blog-grid{grid-template-columns:1fr}}
+.blog-grid .card-link{margin-top:14px}
+.breadcrumb{font-size:14px;color:var(--pcs-text-muted);margin-bottom:12px}
+.breadcrumb a{color:var(--pcs-green-500)}
