@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    
+    
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Simulateur Crédit Immobilier | Golden Finances & Investment</title>
+<meta content="Calculateur de mensualités, coût total et intérêts pour votre prêt immobilier." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html" rel="canonical"/><link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html?lang=fr" hreflang="x-default" rel="alternate"/><link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html?lang=fr" hreflang="fr" rel="alternate"/><link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html?lang=en" hreflang="en" rel="alternate"/><link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html?lang=nl" hreflang="nl" rel="alternate"/><link href="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html?lang=de" hreflang="de" rel="alternate"/>
+
+
+
+
+
+<meta content="website" property="og:type"/>
+<meta content="Simulateur Crédit Immobilier | Golden Finances & Investment" property="og:title"/>
+<meta content="Calculateur de mensualités, coût total et intérêts pour votre prêt immobilier." property="og:description"/>
+<meta content="https://goldenfinanceinvestment.fr/outils/simulateur-credit.html" property="og:url"/>
+<meta content="../images/logo-golden-finances.png" property="og:image"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style.css?v=20260722b" rel="stylesheet"/>
+<link href="/css/conversion.css?v=20260722b" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Simulateur de crédit Golden Finances & Investment", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "url": "https://goldenfinanceinvestment.fr/outils/simulateur-credit.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://goldenfinanceinvestment.fr/"}, {"@type": "ListItem", "position": 2, "name": "Outils", "item": "https://goldenfinanceinvestment.fr/outils/index.html"}, {"@type": "ListItem", "position": 3, "name": "Simulateur crédit", "item": "https://goldenfinanceinvestment.fr/outils/simulateur-credit.html"}]}</script>
+</head>
+<body data-page="tools">
+<div id="header-placeholder"></div>
+<section class="hero hero-sm" style="min-height:40vh"><div class="container hero-inner" style="padding:120px 0 56px"><span class="eyebrow on-dark">OUTIL GRATUIT</span><h1>Simulateur de crédit</h1><p class="lead">Calculez mensualité, coût total et intérêts en temps réel.</p></div></section>
+<section><div class="container"><div class="sim-wrap"><div class="sim-card"><div class="sim-field"><label>Montant (€)</label><input class="sim-input" id="m" type="number" value="250000"/></div><div class="sim-field"><label>Durée (années)</label><input class="sim-input" id="d" type="number" value="20"/></div><div class="sim-field"><label>Taux (%)</label><input class="sim-input" id="t" step="0.01" type="number" value="3.45"/></div><button class="btn btn-primary" onclick="calcMens()">Calculer</button></div><div class="sim-result"><h3>Résultats</h3><div class="sim-big" id="mens">—</div><div class="sim-breakdown"><div>Coût total<strong id="tot">—</strong></div><div>Intérêts<strong id="int">—</strong></div></div></div></div></div></section>
+<div id="footer-placeholder"></div>
+<script src="../js/translations.js?v=20260722b"></script>
+<script src="../js/analytics.js?v=20260722b"></script>
+<script src="../js/main.js?v=20260722b"></script>
+<script src="/js/conversion.js?v=20260722b"></script>
+<script>
+function euro(v){return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v);}
+function calcMens(){
+  const m=+document.getElementById('m').value||0;
+  const n=(+document.getElementById('d').value||0)*12;
+  const r=(+document.getElementById('t').value||0)/100/12;
+  if(!m||!n){return;}
+  const mens=(r===0)?m/n:(m*r)/(1-Math.pow(1+r,-n));
+  const total=mens*n;
+  document.getElementById('mens').textContent=euro(mens);
+  document.getElementById('tot').textContent=euro(total);
+  document.getElementById('int').textContent=euro(total-m);
+}
+calcMens();
+</script>
+</body>
+</html>

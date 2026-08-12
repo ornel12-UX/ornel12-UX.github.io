@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Capacité d’Emprunt | Golden Finances & Investment</title>
+<meta content="Calculez votre capacité d’emprunt selon revenus, charges et durée." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="index.html" rel="canonical"/><link href="__qd1179d8e3f.html" hreflang="x-default" rel="alternate"/><link href="__qd1179d8e3f.html" hreflang="fr" rel="alternate"/><link href="__q0933497c20.html" hreflang="en" rel="alternate"/><link href="__q79a8892e30.html" hreflang="nl" rel="alternate"/><link href="__q035b4b8495.html" hreflang="de" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Capacité d’Emprunt | Golden Finances & Investment" property="og:title"/>
+<meta content="Calculez votre capacité d’emprunt selon revenus, charges et durée." property="og:description"/>
+<meta content="https://goldenfinanceinvestment.fr/outils/capacite-emprunt.html" property="og:url"/>
+<meta content="../images/logo-golden-finances.png" property="og:image"/>
+<link href="../images/favicon-32.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="../css/style__q24dcc35284.css" rel="stylesheet"/>
+<link href="../css/conversion__q24dcc35284.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://goldenfinanceinvestment.fr/"}, {"@type": "ListItem", "position": 2, "name": "Capacite Emprunt", "item": "https://goldenfinanceinvestment.fr/outils/capacite-emprunt.html"}]}</script></head>
+<body data-page="tools">
+<div id="header-placeholder"></div>
+<section class="hero hero-sm" style="min-height:40vh"><div class="container hero-inner" style="padding:120px 0 56px"><span class="eyebrow on-dark">OUTIL GRATUIT</span><h1>Calculateur de capacité d’emprunt</h1><p class="lead">Estimez votre capacité selon revenus, charges et durée.</p></div></section>
+<section><div class="container"><div class="card" style="max-width:760px;margin:auto"><div class="form"><label>Revenus mensuels nets<input class="sim-input" id="rev" type="number" value="4200"/></label><label>Charges mensuelles<input class="sim-input" id="chg" type="number" value="800"/></label><label>Durée (années)<input class="sim-input" id="dur" type="number" value="20"/></label><label>Taux nominal (%)<input class="sim-input" id="tx" step="0.01" type="number" value="3.45"/></label><button class="btn btn-primary" onclick="calcCap()">Calculer ma capacité</button><p id="rescap"></p></div></div></div></section>
+<div id="footer-placeholder"></div>
+<script src="../js/translations__q24dcc35284.js"></script>
+<script src="../js/analytics__q24dcc35284.js"></script>
+<script src="../js/main__q24dcc35284.js"></script>
+<script src="../js/conversion__q24dcc35284.js"></script>
+<script>
+function euro(v){return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(v);}
+function calcCap(){
+ const rev=+document.getElementById('rev').value||0;
+ const chg=+document.getElementById('chg').value||0;
+ const dur=(+document.getElementById('dur').value||0)*12;
+ const t=(+document.getElementById('tx').value||0)/100/12;
+ const mens=Math.max((rev*0.35)-chg,0);
+ const cap=(t===0)?mens*dur:mens*(1-Math.pow(1+t,-dur))/t;
+ document.getElementById('rescap').innerHTML='Mensualité cible: <strong>'+euro(mens)+'</strong><br>Capacité estimée: <strong>'+euro(cap)+'</strong><br>Taux d’endettement cible: <strong>35%</strong>';
+}
+calcCap();
+</script>
+</body>
+</html>
